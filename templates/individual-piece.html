@@ -1,0 +1,76 @@
+<!-- this shows the individual item when it gets selected from the main page -->
+<!-- <h2>{{ currItem.name }}</h2> -->
+
+<!-- <a href="#/favs/{{item.title}}" ng-click="setCurrItem(item)"> -->
+	<img class="" ng-src="{{ currItem.src }}"/>
+	<div class="">
+		<p class="">{{ currItem.description }}</p>
+		<p class="">{{ currItem.price }}</p>
+	</div>
+<!-- </a> -->
+
+<div class="">
+	<button type="button" class="">Add To Cart</button>
+</div>
+
+<p><a href="#/favs">Go back?</a></p>
+<!-- *************************************************************************** -->
+
+
+
+<div class="one-full">
+
+	<div class="third">
+		<h4 class="one-full">artist's name</h4>
+		<a class="one-full" href=""><img src="#" />artist's photo</a>
+		<p class="one-full"></p>
+	</div>
+
+	<div class="two-thirds">
+		<img class="one-full" ng-src="{{item.src}}" >
+		
+		<div class="two-thirds">
+      <p class="">{{ item.title }}, {{ item.medium }}</p>
+      <p class="">{{ item.dimensions }}</p>
+    </div>
+
+    <div class="third">
+    	<input class="" type="button" placeholder="Add To Cart" />
+    	<input class="" type="button" placeholder="View Cart" />
+    </div>
+
+	</div>
+
+</div>
+
+
+
+
+'<div class="one-full">
+
+	<div class="third">
+	<h4 class="one-full">artist's name</h4>
+		<a class="one-full" href=""><img src="#" />artist's photo</a>
+		<p class="one-full">asdf</p>
+	</div>
+
+
+	<div class="two-thirds">
+
+		<img class="one-full" ng-src="{{ $scope.artItems.src }}" >
+
+		
+		<div class="two-thirds">
+      <p class="one-full">{{ $scope.artItems.title }}, {{ $scope.artItems.medium }}</p>
+      <p class="one-full">{{ $scope.artItems.dimensions }}</p>
+    </div>
+
+
+    <div class="third">
+    	<input class="third" type="button" placeholder="Add To Cart" />
+    	<input class="third" type="button" placeholder="View Cart" />
+    </div>
+
+	</div>
+
+</div>'

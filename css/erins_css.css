@@ -1,0 +1,126 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  /*outline: 1px solid red !important;*/
+}
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #e2e2e2;
+  font: normal 100%/1.5 Purisa, Helvetica, sans-serif;
+  line-height: 1;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body {
+	min-width: 23em;
+	max-width: 75em;
+	/*margin: 0 auto;*/
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+	border: 1px solid red;
+}
+
+
+/* borders to test boundaries */
+.border_green {
+	border: 1px solid green;
+}
+.border_black {
+	border: 1px solid black;
+}
+
+/* MORE TEST STUFF TO BE DELETED LATER */
+img:hover {
+	border: 3px ridge green;
+}
+
+
+/* GLOBAL VARIABLES FOR ENTIRE DOCUMENT */
+/* PRE-SETS FOR SECTION & DIV WIDTHS */
+/* I took off 4% to account for any padding, */
+/* borders, or margins that might be needed */
+.one-full {
+	width: 100%;
+	text-align: center;
+}
+.half {
+	width: 49.5%;
+	text-align: center;
+	display: inline-block;
+}
+.third {
+	width: 32.5%;
+	text-align: center;
+	display: inline-block;
+}
+.two-thirds {
+	width: 65.5%;
+	text-align: center;
+	display: inline-block;
+}
+.quarter {
+	width: 23.5%;
+	text-align: center;
+	display: inline-block;
+}
+
+/* SETS LOGO AS BACKGROUND */
+.background {
+	background-image: url("../images/header_image.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 38.5em;
+}
+/* STYLING FOR NAV LINKS */
+.no-style {
+	text-decoration: none;
+	color: black;
+}
+.no-style:hover {
+	font-weight: bolder;
+	color: red;
+}
+/* CLOSES MARGINS FOR PURCHASE NAV */
+.no-bottom-margin {
+	margin-bottom: 0;
+}
+.no-top-margin {
+	margin-top: 0;
+}
+/* FONT-FAMILY FOR <li> NAV LINKS IN HEADER */
+.font_purisa {
+	/*font-family: Purisa;*/
+	display: inline-block;
+}
+.behind_bars {
+	text-decoration: underline;
+}
+.behind_bars:hover {
+	color: green;
+}
+
+
+
+/* STYLING FOR SAMPLE IMAGES */
+.display-size {
+	width: 18em;
+	height: 18em;
+}
+
+
+
+/* BUTTON TO SEE ART IMAGES */
+.see-art {
+	width: 7em;
+	height: 2.5em;
+	border: 1px solid green;
+	border-radius: .5em;
+}

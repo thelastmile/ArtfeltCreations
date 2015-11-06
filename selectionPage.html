@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html  lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  <title></title>
+  <link rel="stylesheet" href="./css/murph.css">
+</head>
+
+<body ng-controller="ArtFeltController">
+
+<div class="one-full background">
+      <ul class="">
+        <li class="quarter"><a href="#home" class="no-style">Home</a></li>
+        <li class="quarter"><a href="#artists" class="no-style">More Artists</a></li>
+        <li class="quarter"><a href="#artwork" class="no-style">Select Category</a></li>
+        <li class="quarter"><a href="#purchase" class="no-style"><p class="no-bottom-margin">Purchase Information</p></a></li>
+      </ul>
+    </div>  
+    <div  class="one-full border_orange">
+
+      <div class="third align-top topDivHeight border_black">
+        <label class="medium"><span><h4>By Medium</h4></span></label>
+        <fieldset class="topHeight">
+          <ul class="radio_select half border_green">
+            <li class="no-style left-align"><input type="radio" name="medium" value="oil" class="eight" />Oil</li>
+            <li class="no-style left-align"><input type="radio" name="medium" value="acrylic" class="eight"/>Acrylic</li>
+            <li class="no-style left-align"><input type="radio" name="medium" value="water color" class="eight"/>Water Color</li>
+            <li class="no-style left-align"><input type="radio" name="medium" value="pen" class="eight"/>Pen</li>
+            <li class="no-style left-align"><input type="radio" name="medium" value="pencil" class="eight"/>Pencil</li>
+          </ul>
+        </fieldset>
+      </div>
+
+      <div class="third  topDivHeight align-top border_blue">
+        <label class="medium"><span><h4>By Size (inches)</h4></span></label>
+        <fieldset class="topHeight">
+          <ul class="radio_select  half border_green">
+            <li class="no-style left-align"><input type="radio" name="size" value="2x3" class="eight" />2 x 3</li>           
+            <li class="no-style left-align"><input type="radio" name="size" value="5x7" class="eight" />5 x 7</li>
+            <li class="no-style left-align"><input type="radio" name="size" value="7x9" class="eight" />7 x 9</li>
+            <li class="no-style left-align"><input type="radio" name="size" value="9x11" class="eight" />9 x 11</li>
+            <li class="no-style left-align"><input type="radio" name="size" value="11x17" class="eight" />11 x 17</li>
+          </ul>
+        </fieldset>
+      </div>      
+      
+      <div  class="third  topDivHeight align-top selectArt border_green">
+        <label class="medium"><span><h4>Select By</h4></span></label>
+        <fieldset class="topHeight border_orange">
+          <div class="selection">
+            <span>Artist</span>
+          </div>
+          <div class="selectByArtist">
+            <input type="type" name="artist" placeholder="Artist name here" class="three-quarter" />
+          </div>
+          <div>
+            <span>Institution</span> 
+          </div>
+          <div class="selectByInstitution">
+            <input type="type"  name="institution" placeholder="Institution" class="three-quarter" />
+          </div>            
+        </fieldset>
+      </div> <!-- third -->  
+
+    </div> <!-- end of one-full  </div> -->
+
+    <div class="one-full border_green">
+      <div class="third border_black"><img src="./images/prisoners_doing_artwork.png"></div>
+      <div class="third border_black"><img src="./images/school_children.png"></div>
+      <div class="third border_black"><img src="./images/gallery.png"></div>
+    </div> <!-- end of one-full  </div> -->
+
+
+    <script src="scripts/angular/angular.js"></script>
+    <script src="scripts/angular/angular-route.js"></script>
+
+    <script src="scripts/jquery/jquery-2.1.4.js"></script>
+    <script src="scripts/script.js"></script>
+
+    <script src="scripts/routes.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/murph.js"></script>
+</body>
+</html>

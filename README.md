@@ -1,3 +1,10 @@
+##Setup Instructions
+Download the repo. Checkout the for-review branch.
+Run python -m SimpleHTTPServer from inside the project root directory.
+Open localhost:8000 to see the app.
+
+
+###Note from Erin
 K,
 First, thanks for the input the other day.
 

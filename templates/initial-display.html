@@ -1,0 +1,41 @@
+<!-- THIS IS THE HEADER WITH THE LOGO, NAV-BAR, AND BACKGROUND IMAGE -->
+<div class="one-full">
+  <ul class="">
+    <li class="fifth"><a href="#" class="no-style">Home</a></li>
+    <li class="fifth"><a href="#/about" class="no-style">About</a></li>
+    <li class="fifth"><a href="#/filter" class="no-style">Select Medium</a></li>
+    <li class="fifth"><a href="#/cart" class="half no-style" ng-click="viewCart()">View Cart</a></li>
+    <li class="fifth"><span class="">{{ ??? }} Items in Cart</span></li>
+  </ul>
+</div>
+<div class="one-full background border_green">
+</div>
+<div class="one-full">
+	<p>Art Felt Creations is connecting artists within the <a href="#/incarcerated">incarcerated community</a> with prospective art buyers.</p>
+</div>
+<!-- *************************************************************************** -->
+<div class="one-full">
+	<!-- <span class="third"><a class="no-style" href="#/filter">Select</a></span> -->
+<!-- THE BUTTON TO CYCLE IMAGES -->
+	<span class="third"></span>
+	<span class="third"><button class="see-art no-style" ng-click="cycleImages()">View More</button></span>
+	<span class="third"></span>
+</div>
+<!-- *************************************************************************** -->
+
+<!-- THIS USES THE cycleImages() FUNCTION IN THE controllers.js FILE TO CYCLE RANDOM PIECES FOR DISPLAY -->
+<div class="one-full">
+	<div class="third bottom_mar" ng-click="setCurrItem(item)" ng-repeat="item in randItems | limitTo:9">
+		<a class="no-style" href="#/favs/{{item.title}}">
+			<img class="one-full display-size click-to-get" ng-src="{{item.src}}" alt="Sorry, no image to display:("/>
+		</a>
+		<div class="one-full">
+			<p class="one-full no-bottom-margin no-top-margin">{{ item.title }}, {{ item.medium }}</p>
+			<p class="one-full no-top-margin no-bottom-margin">{{ item.dimensions }}</p>
+			<p class="half">{{ item.price }}</p><button class="half no-style" ng-click="addArt(item)">Add To Cart</button>
+			<p class="one-full no-top-margin">{{ item.artistName }}</p>
+		</div>
+		<hr>
+	</div>
+</div>
+<!-- *************************************************************************** -->

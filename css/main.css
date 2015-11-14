@@ -1,0 +1,262 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  /*outline: 1px solid green !important;*/
+	color: cornsilk;
+}
+html {
+  padding: 0;
+	border: 1px solid red;
+  margin: 0;
+  font: normal 100%/1.5 Purisa, Helvetica, sans-serif;
+  line-height: 1;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+	background-color: #151414;
+}
+body {no-style
+	/*margin: 0 auto;*/
+	/*min-width: 23em;
+	max-width: 75em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;*/
+}
+
+
+/* borders to test boundaries */
+.border_green {
+	border: 1px solid green;
+}
+.border_black {
+	border: 1px solid black;
+}
+
+/* MORE TEST STUFF TO BE DELETED LATER */
+/*img:hover {
+	border: 3px ridge green;
+}*/
+
+
+/* GLOBAL VARIABLES FOR ENTIRE DOCUMENT */
+/* PRE-SETS FOR SECTION & DIV WIDTHS */
+.one-full {
+	width: 100%;
+	text-align: center;
+}
+.half {
+	width: 49.5%;
+	text-align: center;
+	display: inline-block;
+}
+.third {
+	width: 32.5%;
+	text-align: center;
+	display: inline-block;
+}
+.two-thirds {
+	width: 65.5%;
+	text-align: center;
+	display: inline-block;
+}
+.quarter {
+	width: 23.5%;
+	text-align: center;
+	display: inline-block;
+}
+.fifth {
+	width: 18.5%;
+	text-align: center;
+	display: inline-block;
+}
+/* THIS IS FOR THE cart.html PAGE CATEGORIES */
+.sixths {
+	width: 12.5%;
+	text-align: center;
+	display: inline-block;
+}
+
+/* BACKGROUND FOR IMAGES */
+img {
+	padding: .75em;
+	border: 5px ridge brown;
+	background-color: cornsilk;
+}
+
+/* SETS LOGO AS BACKGROUND */
+.background {
+	min-width: 23em;
+	max-width: 75em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+
+	background-image: url("../images/header_image.png");
+	/*background-image: url("../images/artwork/man_in_cell.png");*/
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 38.5em;
+}
+/* STYLING FOR NAV LINKS AND LIST ITEMS */
+.no-style {
+	text-decoration: none;
+	list-style-type: none;
+}
+.no-style:hover {
+	color: red;
+}
+/* CLOSES MARGINS FOR PURCHASE NAV AND OTHER p TAGS */
+.no-bottom-margin {
+	margin-bottom: 0;
+}
+.no-top-margin {
+	margin-top: 0;
+}
+/* FONT-FAMILY FOR <li> NAV LINKS IN HEADER */
+.font_purisa {
+	/*font-family: Purisa;*/
+	/*display: inline-block;*/
+}
+.behind_bars {
+	text-decoration: underline;
+}
+.behind_bars:hover {
+	/*color: green;*/
+}
+
+
+
+/* STYLING FOR SAMPLE IMAGES */
+.display-size {
+	width: 18em;
+	height: 18em;
+}
+
+/* BUTTONS */
+.see-art, button {
+	width: 7em;
+	height: 2.5em;
+	border: 1px solid cornsilk;
+	background-color: transparent;
+	font-family: Purisa;
+	/*border-radius: .5em;*/
+}
+
+/* ADD AND VIEW CART BUTTONS */
+.addIt {
+	/*width: 9em;*/
+	/*height: 2em;*/
+	/*background-color: skyblue;*/
+	/*font-family: Purisa;*/
+	/*border: 1px dotted black;*/
+	/*border-radius: .05em;*/
+}
+
+/* LEFT ALIGN FOR RADIO BUTTONS */
+.left-align {
+  text-align: left;
+}
+
+/* * * *  Murph'z * * * */
+.eight {
+width: 10.5%;
+display: inline-block;
+}
+.refresh_btn {
+  padding: .25em;
+  border: 0;
+  font: normal 100%/1.5 Purisa, sans-serif;
+}
+.refresh_div button:hover {
+  color: red;
+}
+.refresh_div {
+  padding: 1em 1em 0 1em;  
+}
+.three-quarter {
+  width: 75%;
+  display: inline-block;
+}
+.align-top {
+  vertical-align: top; 
+}
+
+.selectBy{
+  padding-bottom: 1em;
+}
+.selection {
+  padding-top: 1.125em;
+}
+.selection2 {
+  padding-top: .75em;
+}
+.selection div {
+	padding-bottom: .1875em;
+}
+.selection2 div {
+	padding-bottom: .1875em;
+}
+.selectArt  input {
+  padding: .3125em;
+  margin: .2em auto .5em auto;
+  border-radius: .3125em;
+}
+.selectByArtist select {
+	color: black;
+  font-size: .85em;
+  font-family: Purisa, sans-serif;
+  border-radius: .3125em;
+}
+.selectByArtist select option {
+	color: black;
+  font-size: .85em;
+  font-family: Purisa, sans-serif;
+  border-radius: .3125em;
+}
+.selectByInstitution select {
+  color: black;
+  font-size: .85em;
+  font-family: Purisa, sans-serif;
+  border-radius: .3125em;
+}
+.selectByInstitution select option{
+  color: black;
+  font-size: .85em;
+  font-family: Purisa, sans-serif;
+  border-radius: .3125em;
+}
+fieldset {
+  border-radius: .3125em;
+}
+.topHeight {
+  min-height: 9em;  
+}
+/*.topDivHeight {
+  min-height: 12.5em;
+}*/
+.radio_select {
+  padding-top: .3em;
+  padding-bottom: .3em;
+}
+h4 {
+  margin: .75em auto .75em auto;
+}
+.artGallery {
+  /*display: inline-block;*/
+  max-height: 17em;
+}
+.singleGalleryPic {
+  display: inline-block;
+  max-height: 17em;
+  min-height: 17em;
+  width: 100%;
+  /*min-height: 17em;
+  max-width: 100%;*/
+  padding: 1em .5em;
+}

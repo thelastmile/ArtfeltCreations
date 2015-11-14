@@ -1,0 +1,49 @@
+<!-- THIS IS THE HEADER WITH THE LOGO, NAV-BAR, AND BACKGROUND IMAGE -->
+<div class="one-full">
+  <ul class="">
+    <li class="quarter"><a href="#" class="no-style">Home</a></li>
+    <li class="quarter"><a href="#/about" class="no-style">About</a></li>
+    <li class="quarter"><a href="#/filter" class="no-style">Select Medium</a></li>
+    <!-- <li class="quarter"><a href="#purchase" class="no-style">Purchase Information</a></li> -->
+  </ul>
+</div>
+<!-- ******************************************************************** -->
+<!-- ******************************************************************** -->
+<div class="one-full">
+	<p>Items in your order:</p>
+	<table>
+		<thead>
+			<tr class="one-full">
+				<th class="quarter">Image</th>
+				<th class="sixths"></th>
+				<th class="sixths">Title</th>
+				<th class="sixths">Medium</th>
+				<th class="sixths">Size</th>
+				<th class="sixths">Aritist</th>
+				<th class="sixths">Price</th>
+			</tr>
+		</thead>
+		<tbody class="one-full">
+			<tr ng-repeat="item in getArt()">
+				<td class="quarter"><img ng-src="{{ item.src }}" /></td>
+				<td class="sixths"></td>
+				<td class="sixths">{{ item.title }}</td>
+				<td class="sixths">{{ item.medium }}</td>
+				<td class="sixths">{{ item.size }}</td>
+				<td class="sixths">{{ item.artist }}</td>
+				<td class="sixths">{{ (item.price * item.quantity) | currency }}</td>
+				<td><button class="no-style" ng-click="removeArt(item)">Remove Art</button></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr ng-hide="total() ==0">
+				<td></td>
+				<td>Your order total is:</td><td style="color:red">{{ total() | currency }}</td>
+			</tr>
+		</tfoot>
+	</table>
+	<div class="">
+		<button class="no-style">Submit Order</button>
+		<button class="no-style" ng-click="clearCart()">Clear Cart</button>
+	</div>
+</div>

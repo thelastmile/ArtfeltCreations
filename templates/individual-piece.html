@@ -1,0 +1,30 @@
+<!-- THIS IS THE HEADER WITH THE LOGO, NAV-BAR, AND BACKGROUND IMAGE -->
+<div class="one-full">
+  <ul class="">
+    <li class="quarter"><a href="#" class="no-style">Home</a></li>
+    <li class="quarter"><a href="#/about" class="no-style">About</a></li>
+    <li class="quarter"><a href="#/filter" class="no-style">Select Medium</a></li>
+    <!-- <li class="quarter"><a href="#purchase" class="no-style">Purchase Information</a></li> -->
+  </ul>
+</div>
+<!-- ******************************************************************** -->
+<!-- ******************************************************************** -->
+
+
+<!-- THIS SHOWS THE INDIVIDUAL ITEM WHEN IT GETS SELECTED ON THE MAIN PAGE -->
+<div class="one-full">
+	<div class="one-full"><img class="" ng-src="{{currItem.src}}"/>
+	</div>
+	<p class="third">{{ currItem.description }}</p>
+	<div class="third">
+		<div clas"one-full">
+			<p class="one-full no-bottom-margin">{{ currItem.title }}, {{ currItem.medium }}</p>
+			<p class="half no-bottom-margin no-top-margin">{{ currItem.dimensions }}</p>
+			<p class="one-full no-top-margin">{{ currItem.artistName }}</p>
+			<p class="half">{{ currItem.price }}</p><button class="half" ng-click="addArt(currItem)">Add To Cart</button>
+		</div>
+			<div class="half"></div>
+			<a href="#/cart" class="half" ng-click="viewCart()">View Cart</a>
+	</div>
+</div>
+

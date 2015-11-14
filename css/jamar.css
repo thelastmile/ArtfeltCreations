@@ -1,0 +1,74 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  /*outline: 1px solid red !important;*/
+}
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #e2e2e2;
+  font: normal 100%/1.5 Helvetica, sans-serif;
+  line-height: 1;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body {
+	min-width: 23em;
+	max-width: 75em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+/* GLOBAL VARIABLES FOR ENTIRE DOCUMENT */
+/* PRE-SETS FOR SECTION & DIV WIDTHS */
+/* I took off 4% to account for any margins or */
+/* padding that might be needed */
+.one-full {
+	width: 100%;
+	text-align: center;
+}
+.half {
+	width: 49.5%;
+	text-align: center;
+	display: inline-block;
+}
+.third {
+	width: 32.5%;
+	text-align: center;
+	display: inline-block;
+}
+.two-thirds {
+	width: 65.5%;
+	text-align: center;
+	display: inline-block;
+}
+.quarter {
+	width: 23.5%;
+	text-align: center;
+	display: inline-block;
+}
+
+.nav {
+	text-align: center;
+	display: inline-block;
+	margin: 0 .625em;
+}
+.title{
+	text-align: center;
+	background: #395870;
+	background: linear-gradient(#49708f, #293f50);
+	color: #fff;
+	padding: 5em 0;
+
+}
+
+/* ERIN ADDED THIS */
+img.multi {
+	width: 20em;
+	height: 18em;
+}

@@ -2,20 +2,36 @@
 <html ng-app="artFeltApp">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Art Felt Creations</title>
+  
+  <meta name="viewport" content="width=device-width" initial-scale="1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="handheldfriendly" content="true">
+  <meta name="mobileoptimized" content="240">
 
-    <script src="scripts/jquery/jquery-2.1.4.js"></script>
+  <title>Art Felt Creations</title>
 
-    <link href="css/main.css" rel="stylesheet">
-
+  <link href="css/main.css" rel="stylesheet">
 </head>
 
-<!-- Declare app on the page -->
+<!-- DECLARE APP ON THE PAGE -->
 <body ng-controller="ArtFeltController">
+  <!-- THIS IS THE HEADER WITH THE LOGO, NAV-BAR, AND ... -->
+  
+  <div class="one_full fix white_back">
+    <img class="logo_size" src="images/new_logo.png">
+    <ul class="one_full">
+      <li class="quarter no_style"><a href="#" class="no_style">Home</a></li>
+      <li class="quarter no_style"><a href="#/about" class="no_style">About</a></li>
+      <li class="quarter no_style"><a href="#/test_filter" class="no_style">Select</a></li>
+      <li class="quarter no_style"><a href="#/cart" class="no_style">View Cart ({{ totalItems() }})</a></li>
+    </ul>
+  </div>
 
-    <!-- ng-view is where all route related content will be loaded. -->
+
+  <!-- NG-VIEW IS WHERE ALL ROUTE RELATED CONTENT WILL BE LOADED. -->
   <div ng-view></div>
+
+  <script src="scripts/jquery/jquery-2.1.4.js"></script>
 
   <script src="scripts/angular/angular.js"></script>
   <script src="scripts/angular/angular-route.js"></script>
@@ -23,7 +39,6 @@
   <script src="scripts/routes.js"></script>
   <script src="scripts/controllers.js"></script>
   <script src="scripts/main.js"></script>
-
 
 </body>
 </html>

@@ -19,8 +19,8 @@ angular.module("routes", [])
   });
 
   // FILTER PAGE
-  $routeProvider.when("/filter", {
-    templateUrl: "templates/filter.html"
+  $routeProvider.when("/test_filter", {
+    templateUrl: "templates/test_filter.html"
   })
 
   // PROFILE PAGES FOR INDIVIDUAL PIECE

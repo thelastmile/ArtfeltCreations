@@ -9,7 +9,7 @@
 html {
   margin: 0;
   padding: 0;
-  background-color: #e2e2e2;
+  background-color: black;
   font: normal 100%/1.5 Helvetica, sans-serif;
   line-height: 1;
   -moz-text-size-adjust: 100%;
@@ -29,27 +29,23 @@ body {
 /* I took off 4% to account for any margins or */
 /* padding that might be needed */
 .one-full {
-	width: 100%;
+	width: 96%;
 	text-align: center;
 }
 .half {
-	width: 49.5%;
-	text-align: center;
+	width: 46%;
 	display: inline-block;
 }
 .third {
-	width: 32.5%;
-	text-align: center;
+	width: 29%;
 	display: inline-block;
 }
 .two-thirds {
-	width: 65.5%;
-	text-align: center;
+	width: 62%;
 	display: inline-block;
 }
 .quarter {
-	width: 23.5%;
-	text-align: center;
+	width: 21%;
 	display: inline-block;
 }
 
@@ -59,16 +55,54 @@ body {
 	margin: 0 .625em;
 }
 .title{
+	color: aqua;
+	padding-top: 0em;
+	/*padding-bottom: 2em;*/
+	font-size: 5em;
 	text-align: center;
-	background: #395870;
-	background: linear-gradient(#49708f, #293f50);
-	color: #fff;
-	padding: 5em 0;
+	font-family: purisa;
 
 }
+.nav li{
+	display: inline-block;
+	margin: 0 .625;
+	font-size: 2em;
+	font-family: purisa;
+}
+.nav a{
+	color: aqua;
+	padding: 0 2em;
+}
+.nav ul{
+	padding-top: 2em;
+	padding-bottom: 2em
+}
+.bringing_back{
 
-/* ERIN ADDED THIS */
-img.multi {
-	width: 20em;
-	height: 18em;
+	/*background-image: url("../desktop.png");  */
+	box-shadow; color: aqua;
+	/*background-repeat: no-repeat;*/
+	background-size: 100%;
+}
+.kids{
+	float: inherit;
+	margin: .9375 .3125
+	height: 20em;
+	width: 50em;
+}
+.gallery-pix{
+	width: 100%
+}
+
+
+ .logo{
+ 	background: #395870;
+	background: linear-gradient(#3AC0D5, #293f50);
+	color: #fff;
+ }
+.third > img {
+	max-width: 100%;
+	min-height: 15em;
+	padding: 1em;
+	
 }

@@ -1,18 +1,16 @@
   // AREA FOR MURPH'S WORK
-$(document).ready(function() {
-  console.warn("page loading in murph.js");
+  console.warn("page loading");
 
-  var results = [];
-  var tempResult = [];
-  var prevSearch = false; // we need to know if we have searched before
+  $scope.results = [];
+  $scope.tempResult = [];
+  $scope.prevSearch = false; // we need to know if we have searched before
 
-  var artWork = {	medium: "",
+  $scope.artWork = {	medium: "",
                   dimensions: "",
                   artistName: "",
                   prison: ""
                 };
-
-  var artItems = [
+  $scope.artItems = [
 	      {id: 0, medium:"acrylic", artistName: "Tommy Winfrey", dimensions: "11 x 17", prison: "san quentin", src: "images/artwork/eye.jpg", title: "Eye", category: "what", price: "$" + 20000},
 	      {id: 1, medium:"acrylic", artistName: "Tommy Winfrey", dimensions: "9 x 11", prison: "san quentin", src: "images/artwork/indians.png", title: "indians", category: "what", price: "$" + 20000},
 	      {id: 2, medium:"pencil", artistName: "Jon Gripshover", dimensions: "11 x 17", prison: "san quentin", src: "images/artwork/jack_red_cloud.jpg", title: "Jack Red Cloud", category: "what", price: "$" + 20000},
@@ -20,7 +18,7 @@ $(document).ready(function() {
 	      {id: 4, medium:"water color", artistName: "Steve Laceda", dimensions: "11 x 17", prison: "san quentin", src: "images/artwork/lion.jpg", title: "Lion", category: "what", price: "$" + 20000},
 	      {id: 5, medium:"acrylic", artistName: "Tommy Winfrey", dimensions: "9 x 11", prison: "san quentin", src: "images/artwork/man_in_cell.png", title: "Man In Cell", category: "what", price: "$" + 20000},
 	      {id: 6, medium:"acrylic", artistName: "Aly Tamboura", dimensions: "11 x 7", prison: "san quentin", src: "images/artwork/midsummer.jpg", title: "Midsummer", category: "what", price: "$" + 20000},
-	      {id: 70, medium:"oil", artistName: "THX1138", dimensions: "9 x 11", prison: "san quentin", src: "images/artwork/ren_man.png", title: "Ren Man", category: "what", price: "$" + 20000},
+	      {id: 7, medium:"oil", artistName: "THX1138", dimensions: "9 x 11", prison: "san quentin", src: "images/artwork/ren_man.png", title: "Ren Man", category: "what", price: "$" + 20000},
 	      {id: 8, medium:"acrylic", artistName: "Tommy Winfrey", dimensions: "7 x 9", prison: "san quentin", src: "images/artwork/self_portrait.jpg", title: "Self Portrait", category: "what", price: "$" + 20000},
 	      {id: 9, medium:"oil", artistName: "Tommy Winfrey", dimensions: "11 x 17", prison: "san quentin", src: "images/artwork/shark.jpg", title: "Shark", category: "what", price: "$" + 20000},
 	      {id: 10, medium:"acrylic", artistName: "Aly Tamboura", dimensions: "11 x 17", prison: "san quentin", src: "images/artwork/ship.jpg", title: "Ship", category: "what", price: "$" + 20000},
@@ -33,80 +31,79 @@ $(document).ready(function() {
 	      {id: 17, medium:"pencil", artistName: "Tommy Winfrey", dimensions: "5 x 7", prison: "pelican bay", src: "images/artwork/two_moons.jpg", title: "Two Moons", category: "what", price: "$" + 20000},
 	      {id: 18, medium:"water color", artistName: "Jon Gripshover", dimensions: "9 x 11", prison: "san quentin", src: "images/artwork/whales.jpg", title: "Whales", category: "what", price: "$" + 20000},
 	      {id: 19, medium:"pen", artistName: "Steve Laceda", dimensions: "2 x 3", prison: "san quentin", src: "images/artwork/woman.png", title: "Woman", category: "what", price: "$" + 20000},
-	      {id: 20, medium:"pen", artistName: "Joe Smith", dimensions: "7 x 9", prison: "san quentin", src: "images/artwork/woman.png", title: "XWoman", category: "what", price: "$" + 20000},
-	      {id: 31, medium:"pen", artistName: "Steve Laceda", dimensions: "2 x 3", prison: "san quentin", src: "images/artwork/woman.png", title: "Woman", category: "what", price: "$" + 20000},
-	      {id: 420, medium:"pen", artistName: "Joe Smith", dimensions: "7 x 9", prison: "alcatraz", src: "images/artwork/woman.png", title: "XWoman", category: "what", price: "$" + 20000}
+	      {id: 20, medium:"pen", artistName: "Joe Smith", dimensions: "7 x 9", prison: "san quentin", src: "images/artwork/woman.png", title: "XWoman", category: "what", price: "$" + 20000}
 	  ]; 
 
 
 
 ////////// ARTIST SELECTION //////////////
 
-	var artist = {};
-	var artistArr =[];
+	$scope.artist = {};
+	$scope.artistArr =[];
 
 	// Pull artist out of DB and add to selection on page
-	artItems.forEach(function(artPiece){
+	$scope.artItems.forEach(function(artPiece){
 
-		if (!artist.hasOwnProperty(artPiece.artistName)) {
-			artistArr.push(artPiece.artistName)
-			artist[artPiece.artistName] = true; // prevents duplicates
+		if (!$scope.artist.hasOwnProperty(artPiece.artistName)) {
+			$scope.artistArr.push(artPiece.artistName)
+			$scope.artist[artPiece.artistName] = true; // prevents duplicates
 		}	
-	}); // artItems.forEach
+	}); // $scope.artItems.forEach
 
-	artistArr.sort();
+	$scope.artistArr.sort();
 
 	// Add artist to Select By Artist section on page
-	artistArr.forEach(function(indvidualArtist){
-		var $newArtist = $('<option>' + indvidualArtist + '</option>');
+	$scope.artistArr.forEach(function(indvidualArtist){
+		$scope.$newArtist = $('<option>' + indvidualArtist + '</option>');
 		
-		$newArtist.addClass('three-quarter');		
+		$newArtist.addClass('three-quarter');
+		// console.log('newArtist: ', $newArtist);
 		$newArtist.val(indvidualArtist);
 		$('.selectByArtist select').append($newArtist);
 	})
 
  	////////////// INSTITUTIONS SELECTION ////////////////
 
-	var institutions = {};
-	var institutionsArr = [];
+	$scope.institutions = {};
+	$scope.institutionsArr = [];
 
 	// Pull institutions out of DB and add to selectin on page
-	artItems.forEach(function(artPiece){
+	$scope.artItems.forEach(function(artPiece){
 
-		if (!institutions.hasOwnProperty(artPiece.prison)) {
-			institutionsArr.push(artPiece.prison)
-			institutions[artPiece.prison] = true; // prevents duplicates
+		if (!$scope.institutions.hasOwnProperty(artPiece.prison)) {
+			$scope.institutionsArr.push(artPiece.prison)
+			$scope.institutions[artPiece.prison] = true; // prevents duplicates
 		}	
-	}); // artItems.forEach
+	}); // $scope.artItems.forEach
 
-	institutionsArr.sort();
+	$scope.institutionsArr.sort();
 
 	// Add institutions to Select By Institution section on page
-	institutionsArr.forEach(function(institution){
-		var $newInstitution = $('<option>' + institution + '</option>');
+	$scope.institutionsArr.forEach(function(institution){
+		var newInstitution = $('<option>' + institution + '</option>');
 		
-		$newInstitution.addClass('three-quarter');
-		$newInstitution.val(institution);
-		$('.selectByInstitution select').append($newInstitution);
+		newInstitution.addClass('three-quarter');
+		newInstitution.val(institution);
+		$('.selectByInstitution select').append(newInstitution);
 	});
 
 ////////////////  Filter Section  ///////////////////
 
 // This is a filter that selects art work, user selected, 
 // by medium, by size, by artist and by institution.
-function selectArtist() {
+$scope.selectArtist = function () {
 
-	console.log("Pre-Filtered results[]  : ", results);
+	console.log("Pre-Filtered $scope.results[]  : ", $scope.results);
 
 	// If 'artWork[this.name]' is not equal to "" 
-	// that means the user is re-selecting a selection
+	// that means we are re-selecting a selection
 	// from the list. In that case we want to re-initialize 
-	// the selection filter by setting results = [] and 
+	// the selection filter by setting $scope.results = [] and 
 	// resetting 'prevSearch' to false.
 
-	if (artWork[this.name] !== "") {
-		results = [];
-		prevSearch = false;
+	if ($scope.artWork[this.name] !== "") {
+		$scope.results = [];
+		$scope.prevSearch = false;
 	}
 
 	// If 'Select Artist' or 'Select Institution' Information <option> is choosen 
@@ -115,84 +112,84 @@ function selectArtist() {
 		return;
 	}
 
-	artWork[this.name] = this.value;
+	$scope.artWork[this.name] = this.value;
 
-	var key;
+	$scope.key;
 
-	for (key in artWork) {  // check all selections
+	for ($scope.key in $scope.artWork) {  // check all selections
 
 		// Only filter if artWork[key] has a value
-		if (artWork[key] !== "") {
+		if ($scope.artWork[key] !== "") {
 
 			// If we have not previously made a selection
-			// we will enter this block or if 'results' and 
+			// we will enter this block or if '$scope.results' and 
 			// 'prevSearch' have been reset.
-			if (results.length == 0 && prevSearch == false) {
-				artItems.forEach(function(artPiece){
-					if (artPiece[key] == artWork[key]) {	
-						results.push(artPiece.id);
+			if ($scope.results.length == 0 && $scope.prevSearch == false) {
+				$scope.artItems.forEach(function(artPiece){
+					if (artPiece[key] == $scope.artWork[key]) {	
+						$scope.results.push(artPiece.id);
 					}
-				})  // forEach artItems
+				})  // forEach $scope.artItems
 		  
-			} else {            // else if '(results.length !== 0)'!
-					tempResult = [];    
+			} else {            // else if '($scope.results.length !== 0)'!
+					$scope.tempResult = [];  
 
-					artItems.forEach(function(artPiece){
-						if (artPiece[key] == artWork[key] && results.indexOf(artPiece.id) != -1) {		
-							results.splice(results.indexOf(artPiece.id),1);	// remove selected 
-							tempResult.push(artPiece.id);						        // artwork from array
+					$scope.artItems.forEach(function(artPiece){
+						if (artPiece[key] == $scope.artWork[key] && $scope.results.indexOf(artPiece.id) != -1) {		
+							$scope.results.splice($scope.results.indexOf(artPiece.id),1);	// remove selected 
+							$scope.tempResult.push(artPiece.id);						        // artwork from array
 						}
-					})  // forEach artItems
+					})  // forEach $scope.artItems
 
 					// Once we have searched set to true
-					prevSearch = true;
-					results = [];
-					results = tempResult.slice(0);
+					$scope.prevSearch = true;
+					$scope.results = [];
+					$scope.results = $scope.tempResult.slice(0);
 
-			}  // end else if (results.length === 0)
+			}  // end else if ($scope.results.length === 0)
 		} //  end if (key !== in artWork)
-	} // end for (var key in artWork)
+	} // end for ($scope.key in artWork)
 
-  console.log("Filtered results[]  : ", results);
+  console.log("Filtered $scope.results[]  : ", $scope.results);
+  return $scope.results;
 
 //////////  IMAGE DISPLAY  ////////////	  
 
-	var images = {};
-	var imagesArr =[];
+	// $scope.images = {};
+	// $scope.imagesArr =[];
 
-	// Remove images
-	$('.one-full.artGallery').children().detach();
+	// // Remove original images
+	// $('.one-full.artGallery').children().detach();
 
-	// Pull filtered images out of DB and display them on the page.
-	artItems.forEach(function(artPiece){
+	// // Pull filtered images out of DB and display them on the page.
+	// $scope.artItems.forEach(function(artPiece){
 
-		if (results.indexOf(artPiece.id) !== -1) {
-			imagesArr.push(artPiece.src);
-			images[artPiece.src] = true; // prevents duplicates
+	// 	if ($scope.results.indexOf(artPiece.id) !== -1) {
+	// 		imagesArr.push(artPiece.src);
+	// 		images[artPiece.src] = true; // prevents duplicates
 
-			var $imgDiv = $('<div class="third"></div>');
-			var $singleArtPiece = $('<img class="singleGalleryPic">');
-			$singleArtPiece.attr('src', artPiece.src);
-			$imgDiv.append($singleArtPiece);			
-			$('.one-full.artGallery').append($imgDiv);
-		}	
-	}); // artItems.forEach
+	// 		$scope.$imgDiv = $('<div class="third"></div>');
+	// 		$scope.$singleArtPiece = $('<img class="singleGalleryPic">');
+	// 		$singleArtPiece.attr('src', artPiece.src);
+	// 		$imgDiv.append($singleArtPiece);			
+	// 		$('.one-full.artGallery').append($imgDiv);
+	// 	}	
+	// }); // $scope.artItems.forEach
 
-	console.log("imagesArr: ", imagesArr);
+	// console.log("imagesArr: ", imagesArr);
 
 //////////  End IMAGE DISPLAY  ////////////
 
 
 }  // function selectArtist
 
-jQuery('.radio_select li input').on('click', selectArtist);
-jQuery('.selectByArtist select').on('click', selectArtist);
-jQuery('.selectByInstitution select').on('click', selectArtist);
-jQuery('.quarter.refresh_btn').on('click', function() {
+$('.radio_select li input').on('click', $scope.selectArtist);
+$('.selectByArtist select').on('click', $scope.selectArtist);
+$('.selectByInstitution select').on('click', $scope.selectArtist);
+$('.quarter.refresh_btn').on('click', function() {
 	window.location.reload();
 });
 
 
-}); // $(document).ready
 
 

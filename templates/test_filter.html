@@ -1,0 +1,127 @@
+<div class="one_full extra_padding">
+    <div  class="one_full border_orange">
+
+      <div class="third align-top topDivHeight border_black">
+        <label class="medium"><span><h4>By Medium</h4></span></label>
+        <fieldset class="topHeight">
+
+          <ul class="radio_select half border_green">
+
+            <li class="no_style left-align medium">
+              <input  ng-click="selectArtist('medium', 'oil')" type="radio" name="medium" class="eight" id="oil"/>
+              <label for="oil">Oil</label>
+            </li>
+
+            <li class="no_style left-align medium" >
+              <input id="acrylic" ng-click="selectArtist('medium', 'acrylic')" type="radio" name="medium" value="acrylic" class="eight"/>            	
+            	<label for="acrylic">Acrylic</label>
+            </li>
+
+            <li id="water_color" class="no_style left-align medium">
+            	<input ng-click="selectArtist('medium', 'water color')" id="water color" type="radio" name="medium" value="acrylic" class="eight"/>              
+              <label for="water color">Water Color</label>            	
+            </li>
+
+            <li class="no_style left-align medium">
+              <input  ng-click="selectArtist('medium', 'pen')" type="radio" name="medium" class="eight" id="pen"/>
+              <label for="pen">Pen</label>
+            </li>
+
+            <li class="no_style left-align medium">
+              <input  ng-click="selectArtist('medium', 'pencil')" type="radio" name="medium" class="eight" id="pencil"/>
+              <label for="pencil">Pencil</label>
+            </li>
+
+          </ul>
+
+
+        </fieldset>
+      </div>
+
+      <div class="third  topDivHeight align-top border_blue">
+        <label class="medium"><span><h4>By Size (inches)</h4></span></label>
+        <fieldset class="topHeight">
+          <ul class="radio_select  half border_green">
+
+           <li class="no_style left-align">
+              <input  ng-click="selectArtist('dimensions', '2 x 3')" type="radio" name="dimensions" class="eight" id="2 x 3"/>
+              <label for="2 x 3">2 x 3</label>
+            </li>
+
+            <li class="no_style left-align">
+              <input  ng-click="selectArtist('dimensions', '5 x 7')" type="radio" name="dimensions" class="eight" id="5 x 7"/>
+              <label for="5 x 7">5 x 7</label>
+            </li>
+
+            <li class="no_style left-align">
+              <input  ng-click="selectArtist('dimensions', '7 x 9')" type="radio" name="dimensions" class="eight" id="7 x 9"/>
+              <label for="7 x 9">7 x 9</label>
+            </li>
+
+            <li class="no_style left-align">
+              <input  ng-click="selectArtist('dimensions', '9 x 11')" type="radio" name="dimensions" class="eight" id="9 x 11"/>
+              <label for="9 x 11">9 x 11</label>
+            </li>
+
+            <li class="no_style left-align">
+              <input  ng-click="selectArtist('dimensions', '11 x 17')" type="radio" name="dimensions" class="eight" id="11 x 17"/>
+              <label for="11 x 17">11 x 17</label>
+            </li>           
+
+          </ul>
+        </fieldset>
+      </div>      
+      
+      <div  class="third  topDivHeight align-top selectArt border_green">
+        <label class="medium"><span><h4>Select By</h4></span></label>
+        <fieldset class="topHeight border_orange">
+          <div class="selection">
+            <span>Artist</span>
+          </div>
+          <div class="selectByArtist">
+            <select ng-click="selectArtist('artistName', artWork.artistName)" type="type" name="artist" ng-model="artWork.artistName" class="three-quarter" >
+              <!-- <option value="choose" class="three-quarter">Select Artist</option> -->
+              <!-- Options are generated from db onload -->
+              <option ng-repeat="artist in artistArr"  >{{artist}}</option>
+
+            </select>
+          </div>
+          <div class="selection2">
+            <span>Institution</span> 
+          </div>
+          <div class="selectByInstitution">
+            <select ng-click="selectArtist('prison', artWork.prison)" type="type" name="artist" ng-model="artWork.prison" class="three-quarter" >
+              <option value="choose" class="three-quarter">Select Institution</option>
+              <!-- Options are generated from db onload -->
+              <option ng-repeat="prison in institutionsArr">{{prison}}</option>
+            </select>
+          </div>            
+        </fieldset>
+      </div> <!-- third -->  
+
+    </div> <!-- end of one_full  </div> -->
+
+    <div  class="one-full refresh_div">
+      <!-- <button class="quarter refresh_btn">RESET SELECTIONS</button>  -->  
+      <button ng-click="filterReset()" class="quarter no-style refresh_btn ">RESET SELECTIONS</button>
+    </div>
+
+
+
+<!-- THIS USES THE cycleImages() FUNCTION IN THE controllers.js FILE TO CYCLE RANDOM PIECES FOR DISPLAY -->
+<div class="one_full">
+	<div class="third bottom_margin" ng-click="setCurrItem(item)" ng-repeat="item in images"> <!-- NO NEED TO LIMIT WITH FILTER -->
+		<a class="no_style" href="#/favs/{{item.title}}">
+			<img class="bimage one_full display-size" ng-src="{{item.src}}" alt="Sorry, no image to display:("/>
+		</a>
+		<div class="one_full extra_margin_top">
+			<p class="one_full no-bottom-margin no-top-margin">{{ item.title }}, {{ item.medium }}</p>
+			<p class="one_full no-top-margin no-bottom-margin">{{ item.dimensions }}</p>
+			<p class="half">{{ item.price | currency }}</p><span class="half"><button class="" ng-click="addArt(item)">Add To Cart</button></span>
+			<p class="one_full">Artist: {{ item.artistName }}</p>
+		</div>
+		<hr>
+	</div>
+</div>
+<!-- *************************************************************************** -->
+

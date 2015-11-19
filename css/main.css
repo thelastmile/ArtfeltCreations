@@ -4,194 +4,341 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
-  /*outline: 1px solid green !important;*/
-	color: cornsilk;
+	color: #151414;
+  outline: 1px solid black !important;
 }
 html {
   padding: 0;
-	border: 1px solid red;
   margin: 0;
-  font: normal 100%/1.5 Purisa, Helvetica, sans-serif;
+  font: normal 100%/1.5 Sawasdee, Helvetica, sans-serif;
   line-height: 1;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-	background-color: #151414;
+  font-weight: bold;
 }
-body {no-style
-	/*margin: 0 auto;*/
-	/*min-width: 23em;
-	max-width: 75em;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;*/
+body {
+	margin: 0 auto;
+	text-align: center;
 }
 
 
-/* borders to test boundaries */
-.border_green {
-	border: 1px solid green;
-}
-.border_black {
-	border: 1px solid black;
+
+.test_red {
+	border: 1px solid transparent;
 }
 
-/* MORE TEST STUFF TO BE DELETED LATER */
-/*img:hover {
-	border: 3px ridge green;
-}*/
 
+/**************************************************/
+/**************************************************/
+/* THIS IS THE PICTURE FRAME BORDER
+   FOR THE IMAGES OF ART */
+.bimage {
+	border-image: url('../images/picture_frame_II.png') 96 94 94 96 stretch;
+	border-right: 2em;
+	border-left: 2em;
+	border-top: 2em;
+	border-bottom: 2em;
+}
 
+/**************************************************/
+/**************************************************/
 /* GLOBAL VARIABLES FOR ENTIRE DOCUMENT */
 /* PRE-SETS FOR SECTION & DIV WIDTHS */
-.one-full {
+.one_full {
 	width: 100%;
 	text-align: center;
 }
-.half {
-	width: 49.5%;
+.three_quarters {
+	width: 75%;
 	text-align: center;
-	display: inline-block;
+}
+.half {
+	width: 49%;
+	text-align: center;
+	float: left;
 }
 .third {
-	width: 32.5%;
+	width: 33.333%;
 	text-align: center;
-	display: inline-block;
+	float: left;
 }
-.two-thirds {
-	width: 65.5%;
+.two_thirds {
+	width: 66.666%;
 	text-align: center;
-	display: inline-block;
+	float: left;
 }
 .quarter {
-	width: 23.5%;
+	width: 25%;
 	text-align: center;
-	display: inline-block;
+	float: left;
 }
 .fifth {
-	width: 18.5%;
+	width: 20%;
 	text-align: center;
-	display: inline-block;
+	float: left;
 }
-/* THIS IS FOR THE cart.html PAGE CATEGORIES */
-.sixths {
-	width: 12.5%;
+.sixth {
+	width: 16.666%;
 	text-align: center;
-	display: inline-block;
+	float: left;
 }
 
-/* BACKGROUND FOR IMAGES */
-img {
-	padding: .75em;
-	border: 5px ridge brown;
-	background-color: cornsilk;
-}
-
-/* SETS LOGO AS BACKGROUND */
-.background {
-	min-width: 23em;
-	max-width: 75em;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-
-
-	background-image: url("../images/header_image.png");
-	/*background-image: url("../images/artwork/man_in_cell.png");*/
-	background-size: contain;
-	background-repeat: no-repeat;
-	height: 38.5em;
-}
 /* STYLING FOR NAV LINKS AND LIST ITEMS */
-.no-style {
+.no_style {
 	text-decoration: none;
 	list-style-type: none;
 }
-.no-style:hover {
-	color: red;
+.no_style:hover {
+	color: green;
 }
-/* CLOSES MARGINS FOR PURCHASE NAV AND OTHER p TAGS */
-.no-bottom-margin {
+/* CLOSES MARGINS FOR 
+   VARIOUS ELEMENTS*/
+.no_bottom_margin {
 	margin-bottom: 0;
 }
-.no-top-margin {
+.no_top_margin {
 	margin-top: 0;
 }
-/* FONT-FAMILY FOR <li> NAV LINKS IN HEADER */
-.font_purisa {
-	/*font-family: Purisa;*/
-	/*display: inline-block;*/
+
+/* BUTTONS */
+button {
+	width: 7em;
+	height: 2.5em;
+	border-radius: .25em;
+	background-color: transparent;
+	font-family: Sawasdee;
 }
-.behind_bars {
-	text-decoration: underline;
+/* THE VIEW MORE BUTTON */
+.extra_margin_bottom {
+	margin-bottom: .5em;
 }
-.behind_bars:hover {
-	/*color: green;*/
+.extra_margin_top {
+	margin-top: .55em;
+}
+.dark_button {
+	background-color: #151414;
+	font-size: 100%;
+	color: white;
+}
+.dark_button:hover {
+	color: #151414;
+	font-weight: bolder;
+	background-color: white;
+}
+
+/* ******************************************************* */
+/* ******************************************************* */
+/* *********************END GLOBAL************************ */
+/* ******************************************************* */
+/* ******************************************************* */
+
+
+
+/* ******************************************************* */
+/* ******************************************************* */
+/* index.html PAGE */
+/* POSITIONS THE HEADER/NAV BAR AS FIXED */
+.fix {
+	position: fixed;
+	padding-top: 1em;
+	padding-bottom: .75em;
+	/*border-bottom: 2px solid #151414;*/
+}
+.logo_size {
+	width: 12%;
+}
+/* NEEDED TO SEPERATE IMAGE FROM
+   HEADER/NAV BAR */
+.extra_padding {
+	padding-top: 9em;
+}
+.white_back {
+	background-color: white;
 }
 
 
 
-/* STYLING FOR SAMPLE IMAGES */
-.display-size {
+/* ******************************************************* */
+/* ******************************************************* */
+/* initial-display.html PAGE */
+/* SIZE ADJUSTMENT FOR THE MAIN PAGE HEADER IMAGE */
+.header_ratio {
+	width: 36em;
+}
+/* STYLING FOR SAMPLE IMAGES ON intial-display.html PAGE*/
+.display_size {
+	width: 20em;
+	height: 20em;
+}
+.cart_display_size {
 	width: 18em;
 	height: 18em;
 }
 
-/* BUTTONS */
-.see-art, button {
-	width: 7em;
-	height: 2.5em;
-	border: 1px solid cornsilk;
-	background-color: transparent;
-	font-family: Purisa;
-	/*border-radius: .5em;*/
+
+
+/* ******************************************************* */
+/* ******************************************************* */
+/* STYLING FOR THE individual-piece.html PAGE */
+/* THIS MAINTAINS THE RATIO OF THE ART IMAGE */
+.image_ratio {
+	width: 30em;
+}
+/* THIS IS TO SIZE THE ARTIST'S PHOTO */
+.artist_photo {
+	width: 12em;
+}
+.visibility_none {
+	visibility: hidden;
+}
+.extra_padding_top {
+	padding-top: .6875em;
 }
 
-/* ADD AND VIEW CART BUTTONS */
-.addIt {
-	/*width: 9em;*/
-	/*height: 2em;*/
-	/*background-color: skyblue;*/
-	/*font-family: Purisa;*/
-	/*border: 1px dotted black;*/
-	/*border-radius: .05em;*/
+
+
+/* ******************************************************* */
+/* ******************************************************* */
+/* STYLING FOR THE about.html PAGE */
+.main_image {
+	width: 36em;
 }
+.kids_and_art {
+	width: 24em;
+	height: 18em;
+}
+
+
+
+/* ******************************************************* */
+/* ******************************************************* */
+/* STYLING FOR THE cart.html PAGE */
+.highlight_red:hover {
+	color: red;
+}
+
+
+
+
+/* ******************************************************* */
+/* ******************************************************* */
+/* ******************************************************* */
+/* ********************* MEDIA QUERIES ******************* */
+/* ******************************************************* */
+/* ******************************************************* */
+/* ******************************************************* */
+@media only screen and (max-width: 1150px) {
+	.header_ratio {
+		width: 41em;
+	}
+	.drop_from_third {
+		width: 50%;
+		text-align: center;
+		float: left;
+	}
+	.half {
+		width: 100%;
+		text-align: center;
+	}
+	.btn_width_adjust {
+		width: 18%;
+		float: none;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.logo_size {
+		width: 25%;
+	}
+	.extra_padding {
+		padding-top: 14em;
+	}
+	.header_ratio {
+		width: 27em;
+	}
+	.third {
+		width: 100%;
+		text-align: center;
+	}
+	.quarter {
+		width: 100%;
+		text-align: center;
+	}
+	.image_ratio {
+		width: 20em;
+	}
+	.artist_photo {
+		width: 11em;
+	}
+}
+
+
+
+
+
+
+
+
+
+/* ******************************************************* */
+/* ******************************************************* */
+/* ******************************************************* */
+/* ******************************************************* */
+/* ******************************************************* */
+/* ******************************************************* */
+/* ******************************************************* */
+/* ******************************************************* */
+
+/* MURPH'S WORK */
 
 /* LEFT ALIGN FOR RADIO BUTTONS */
-.left-align {
+/*.left-align {
   text-align: left;
-}
+}*/
 
 /* * * *  Murph'z * * * */
+@media only screen and (max-width: 960px) {
+	.one-full.background.filterPg{
+		height: 31em;
+	}
+}
+@media only screen and (max-width: 770px) {
+	.one-full.background.filterPg{
+		height: 23em;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.one-full.background.filterPg{
+		height: 13.5em;
+	}
+}
+.three-quarter {
+  width: 75%;
+  display: inline-block;
+}
 .eight {
 width: 10.5%;
 display: inline-block;
+}
+.refresh_div {
+  padding: 1em 1em 1em 1em;  
 }
 .refresh_btn {
   padding: .25em;
   border: 0;
   font: normal 100%/1.5 Purisa, sans-serif;
 }
-.refresh_div button:hover {
-  color: red;
-}
-.refresh_div {
-  padding: 1em 1em 0 1em;  
-}
-.three-quarter {
-  width: 75%;
-  display: inline-block;
-}
 .align-top {
   vertical-align: top; 
 }
-
 .selectBy{
   padding-bottom: 1em;
 }
 .selection {
-  padding-top: 1.125em;
+  padding-top: 1em;
 }
 .selection2 {
   padding-top: .75em;
@@ -207,29 +354,26 @@ display: inline-block;
   margin: .2em auto .5em auto;
   border-radius: .3125em;
 }
-.selectByArtist select {
+.selectByArtist select, .selectByArtist select option {
 	color: black;
   font-size: .85em;
   font-family: Purisa, sans-serif;
   border-radius: .3125em;
 }
-.selectByArtist select option {
-	color: black;
-  font-size: .85em;
-  font-family: Purisa, sans-serif;
-  border-radius: .3125em;
+.selectByArtist select:hover {
+	font-weight: bold;
 }
-.selectByInstitution select {
+.selectByArtist select:selected {
+	font-weight: bold;
+}
+.selectByInstitution select, .selectByInstitution select option {
   color: black;
   font-size: .85em;
   font-family: Purisa, sans-serif;
   border-radius: .3125em;
 }
-.selectByInstitution select option{
-  color: black;
-  font-size: .85em;
-  font-family: Purisa, sans-serif;
-  border-radius: .3125em;
+.selectByInstitution select:hover {
+	font-weight: bold;
 }
 fieldset {
   border-radius: .3125em;
@@ -237,9 +381,9 @@ fieldset {
 .topHeight {
   min-height: 9em;  
 }
-/*.topDivHeight {
+.topDivHeight {
   min-height: 12.5em;
-}*/
+}
 .radio_select {
   padding-top: .3em;
   padding-bottom: .3em;
@@ -248,7 +392,6 @@ h4 {
   margin: .75em auto .75em auto;
 }
 .artGallery {
-  /*display: inline-block;*/
   max-height: 17em;
 }
 .singleGalleryPic {
@@ -256,7 +399,12 @@ h4 {
   max-height: 17em;
   min-height: 17em;
   width: 100%;
-  /*min-height: 17em;
-  max-width: 100%;*/
+  min-height: 17em;
+  max-width: 100%;
   padding: 1em .5em;
 }
+
+
+
+
+

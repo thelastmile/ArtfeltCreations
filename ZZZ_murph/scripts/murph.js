@@ -11,7 +11,6 @@ $(document).ready(function() {
                   artistName: "",
                   prison: ""
                 };
-
   var artItems = [
 	      {id: 0, medium:"acrylic", artistName: "Tommy Winfrey", dimensions: "11 x 17", prison: "san quentin", src: "images/artwork/eye.jpg", title: "Eye", category: "what", price: "$" + 20000},
 	      {id: 1, medium:"acrylic", artistName: "Tommy Winfrey", dimensions: "9 x 11", prison: "san quentin", src: "images/artwork/indians.png", title: "indians", category: "what", price: "$" + 20000},
@@ -33,7 +32,7 @@ $(document).ready(function() {
 	      {id: 17, medium:"pencil", artistName: "Tommy Winfrey", dimensions: "5 x 7", prison: "pelican bay", src: "images/artwork/two_moons.jpg", title: "Two Moons", category: "what", price: "$" + 20000},
 	      {id: 18, medium:"water color", artistName: "Jon Gripshover", dimensions: "9 x 11", prison: "san quentin", src: "images/artwork/whales.jpg", title: "Whales", category: "what", price: "$" + 20000},
 	      {id: 19, medium:"pen", artistName: "Steve Laceda", dimensions: "2 x 3", prison: "san quentin", src: "images/artwork/woman.png", title: "Woman", category: "what", price: "$" + 20000},
-	      {id: 20, medium:"pen", artistName: "Joe Smith", dimensions: "7 x 9", prison: "san quentin", src: "images/artwork/woman.png", title: "XWoman", category: "what", price: "$" + 20000},
+	      {id: 20, medium:"pen", artistName: "Joe Smith", dimensions: "7 x 9", prison: "san quentin", src: "images/artwork/woman.png", title: "XWoman", category: "what", price: "$" + 20000}
 	  ]; 
 
 
@@ -187,6 +186,9 @@ function selectArtist() {
 $('.radio_select li input').on('click', selectArtist);
 $('.selectByArtist select').on('click', selectArtist);
 $('.selectByInstitution select').on('click', selectArtist);
+$('.quarter.refresh_btn').on('click', function() {
+	window.location.reload();
+});
 
 
 }); // $(document).ready

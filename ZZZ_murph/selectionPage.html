@@ -7,12 +7,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
   <title></title>
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/murph.css">
 </head>
 
 <body ng-controller="ArtFeltController">
 
-<div class="one-full background filterPg">
+<div class="one-full background">
       <ul class="">
         <li class="quarter"><a href="#home" class="no-style">Home</a></li>
         <li class="quarter"><a href="#artists" class="no-style">More Artists</a></li>
@@ -25,12 +25,12 @@
       <p>Select your Art preference based on the below filter.</p> 
       <hr class="half">
     </div>
-    <div  class="one-full">
+    <div  class="one-full border_orange">
 
       <div class="third align-top topDivHeight border_black">
         <label class="medium"><span><h4>By Medium &nbsp</h4></span></label>
         <fieldset class="topHeight">
-          <ul class="radio_select half">
+          <ul class="radio_select half border_green">
             <li class="no-style left-align"><input type="radio" name="medium" value="oil" class="eight" />Oil</li>
             <li class="no-style left-align"><input type="radio" name="medium" value="acrylic" class="eight"/>Acrylic</li>
             <li class="no-style left-align"><input type="radio" name="medium" value="water color" class="eight"/>Water Color</li>
@@ -40,10 +40,10 @@
         </fieldset>
       </div>
 
-      <div class="third  topDivHeight align-top">
+      <div class="third  topDivHeight align-top border_blue">
         <label class="medium"><span><h4>By Size (inches)</h4></span></label>
         <fieldset class="topHeight">
-          <ul class="radio_select  half">
+          <ul class="radio_select  half border_green">
             <li class="no-style left-align"><input type="radio" name="dimensions" value="2 x 3" class="eight" />2 x 3</li>           
             <li class="no-style left-align"><input type="radio" name="dimensions" value="5 x 7" class="eight" />5 x 7</li>
             <li class="no-style left-align"><input type="radio" name="dimensions" value="7 x 9" class="eight" />7 x 9</li>
@@ -53,11 +53,11 @@
         </fieldset>
       </div>      
       
-      <div  class="third  topDivHeight align-top selectArt">
+      <div  class="third  topDivHeight align-top selectArt border_green">
         <label class="medium"><span><h4>Select By</h4></span></label>
         <fieldset class="topHeight border_orange">
           <div class="selection">
-            <div>Artist</div>
+            <span>Artist</span>
           </div>
           <div class="selectByArtist">
             <select type="type" name="artistName" class="three-quarter" />
@@ -66,7 +66,7 @@
             </select>
           </div>
           <div class="selection2">
-            <div>Institution</div> 
+            <span>Institution</span> 
           </div>
           <div class="selectByInstitution">
             <select type="type" name="prison" class="three-quarter" />
@@ -80,22 +80,47 @@
     </div> <!-- end of one-full  </div> -->
     
     <div  class="one-full refresh_div">
-      <!-- <button class="quarter refresh_btn">RESET SELECTIONS</button>    -->
-      <button class="quarter no-style refresh_btn ">RESET SELECTIONS</button>
+      <button class="quarter refresh_btn">RESET SELECTIONS</button>     
     </div>
 
     <div class="one-full artGallery">
-      <!--  
-            *************************
-             DO NOT REMOVE THIS DIV
-            *************************
-      -->
-    </div> <!-- end of one-full artGallery </div> -->
+<!-- 
+      <div class="third border_black">
+        <img class="singleGalleryPic" src="./images/prisoners_doing_artwork.png">
+      </div>
+      <div class="third border_black">
+        <img class="singleGalleryPic" src="./images/teen_art/cet.jpg">
+      </div>
+      <div class="third border_black">
+        <img class="singleGalleryPic" src="./images/teen_art/teen-kids-painting.jpg">
+      </div>
+
+      <div class="third border_black">
+        <img class="singleGalleryPic" src="./images/prisoners_doing_artwork.png">
+      </div>
+      <div class="third border_black">
+        <img class="singleGalleryPic" src="./images/teen_art/school_children.png">
+      </div>
+      <div class="third border_black">
+        <img class="singleGalleryPic" src="./images/teen_art/children-making-art-in-classroom.jpg">
+      </div>
+
+      <div class="third border_black">
+        <img class="singleGalleryPic" src="./images/teen_art/school_children.png">
+      </div>
+      <div class="third border_black">
+        <img class="singleGalleryPic" src="./images/gallery.png">
+      </div> -->
+
+    </div> <!-- end of one-full  </div> -->
+    
 
     <script src="scripts/angular/angular.js"></script>
     <script src="scripts/angular/angular-route.js"></script>
+
     <script src="scripts/jquery/jquery-2.1.4.js"></script>
-    <!-- <script src="scripts/script.js"></script> -->
+    <script src="scripts/script.js"></script>
+
     <script src="scripts/routes.js"></script>
     <script src="scripts/controllers.js"></script>
     <script src="scripts/main.js"></script>

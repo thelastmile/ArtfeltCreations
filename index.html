@@ -9,28 +9,34 @@
   <meta name="mobileoptimized" content="240">
 
   <title>Art Felt Creations</title>
-
+  <!-- STYLING -->
   <link href="css/main.css" rel="stylesheet">
 </head>
 
-<!-- DECLARE APP ON THE PAGE -->
+<!-- DECLARE APP FOR THE PAGE -->
 <body ng-controller="ArtFeltController">
   <!-- THIS IS THE HEADER WITH THE LOGO, NAV-BAR, AND ... -->
   
-  <div class="one_full fix white_back">
-    <img class="logo_size" src="images/new_logo.png">
-    <ul class="one_full">
-      <li class="quarter no_style"><a href="#" class="no_style">Home</a></li>
-      <li class="quarter no_style"><a href="#/about" class="no_style">About</a></li>
-      <li class="quarter no_style"><a href="#/test_filter" class="no_style">Select</a></li>
-      <li class="quarter no_style"><a href="#/cart" class="no_style">View Cart ({{ totalItems() }})</a></li>
+  <div class="one_full fix logo_div">
+  <div class="one_full fix shift_div" style="">
+    <ul class="nav_pad_ul">
+      <li class="nav_pad_li no_style"><a href="#" class="home_color no_style">Home</a></li>
+      <li class="nav_pad_li no_style"><a href="#/new_about" class="about_color no_style">About</a></li>
+      <li class="nav_pad_li no_style"><a href="#/gallery" class="gallery_color no_style">Gallery</a></li>
+      <li class="nav_pad_li no_style"><a href="#/cart" class="cart_color no_style">Cart ({{ totalItems() }})</a></li>
+      <li class="nav_pad_li no_style"><a href="#/contact" class="contact_color no_style">Contact</a></li>
     </ul>
   </div>
 
+    <!-- <img class="logo_image" src="images/newest_logo.png" /> -->
+    <p class="logo_text no_bottom_margin">Artfelt Creations</p>
+    <p class="opportunity no_top_margin">Providing Opportunity Through Creativity</p>
+  </div>
 
   <!-- NG-VIEW IS WHERE ALL ROUTE RELATED CONTENT WILL BE LOADED. -->
   <div ng-view></div>
 
+  <!-- SCRIPTS -->
   <script src="scripts/jquery/jquery-2.1.4.js"></script>
 
   <script src="scripts/angular/angular.js"></script>

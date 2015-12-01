@@ -1,0 +1,75 @@
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<script src="scripts/jquery/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<!-- <link href="css/main.css" rel="stylesheet"> -->
+<!-- 	<div class="panel-heading">
+		<p><a href="#/" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-chevron-left"></span>Back</a></p>
+		<h1>New User Sign In<h1>
+	</div> -->
+	
+<div class="one_full panel panel-default extra_padding">
+	<div class="panel-body">
+		<form class="form-horizontal" role="form" name="userform" nonvalidate>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">First Name</label>
+				<div class="col-sm-10">
+					<input ng-model="first" type="text" class="form-control" name="first" placeholder="Enter First Name" required maxlength="15" />
+					<span class="error" ng-show="userform.first.$error.required">
+						Please enter your first name
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Last Name</label>
+				<div class="col-sm-10">
+					<input ng-model="lastname" type="text" class="form-control" name="lastname" placeholder="Enter Last Name" required maxlength="15" />
+					<span class="error" ng-show="userform.lastname.$error.required">
+						Please enter your last name
+					</span>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="col-sm-2 control-label">City</label>
+				<div class="col-sm-10">
+					<input ng-model="city" type="text" class="form-control" name="city" placeholder="Enter City" required maxlength="15" />
+					<span class="error" ng-show="userform.city.$error.required">
+						Please enter your city
+					</span>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="col-sm-2 control-label">State</label>
+				<div class="col-sm-10">
+					<input ng-model="state" type="text" class="form-control" name="state" placeholder="Enter State" required maxlength="15" />
+					<span class="error" ng-show="userform.state.$error.required">
+						Please enter your state
+					</span>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Zip Code</label>
+				<div class="col-sm-10">
+					<input ng-model="zip" type="text" class="form-control" name="zip" placeholder="Zip Code" required maxlength="5" />
+					<span class="error" ng-show="userform.zip.$error.required">
+						Please enter your zip code
+					</span>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<a href="#/cart" ng-click="addUser(first, last, city, state, zip)"><button ng-disabled="userform.$invalid" type="submit" class="btn btn-success">Sign in</button></a>&nbsp;&nbsp;<span ng-show="userform.$invalid">All fields must be completed to create a new user account</span>
+				</div></a>
+			</div>
+		</form>
+	</div>
+	
+</div>
+	
+	
+	
+	
+	

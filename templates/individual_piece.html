@@ -1,0 +1,30 @@
+<!-- THIS SHOWS THE INDIVIDUAL ITEM WHEN IT GETS SELECTED ON THE MAIN PAGE -->
+<div class="one_full extra_padding extra_margin_bottom">
+
+	<div class="half">
+		<p class="one_full no_bottom_margin">{{ currItem.title }}, {{ currItem.medium }}</p>
+			<p class="one_full no_top_margin">{{ currItem.dimensions }}</p>
+		<img class="one_full bimage image_ratio" ng-src="{{currItem.src}}" />
+
+		<div clas"one_full extra_margin_top">
+			<p class="half no_top_margin no_bottom_margin extra_padding_top">{{ currItem.price | currency }}</p>
+			<button class="dark_button no_top_margin" ng-click="addArt(currItem)">Add To Cart</button>
+		</div>
+
+		<div clas"one_full">
+			<p class="half no_top_margin no_bottom_margin visibility_none">elo</p>
+			<a class="half no_style" href="#"><p class="no_top_margin no_style">Continue Shopping</p></a>
+		</div>
+	
+	</div>
+
+
+	<div class="half">
+		<p class="one_full no_bottom_margin">Artist: {{ currItem.artistName }}</p>
+		<p class="one_full visibility_none no_top_margin no_bottom_margin">Artist: {{ currItem.artistName }}</p>
+		<div class="one_full no_top_margin"><img class="artist_photo" src="images/artist_image.png"></div>
+		<p class="one_full">{{ currItem.description }}</p>
+	</div>
+
+	
+</div>

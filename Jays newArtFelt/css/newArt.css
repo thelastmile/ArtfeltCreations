@@ -1,0 +1,16 @@
+.third > img {
+	width: 25%;
+	height: 15em;
+}
+
+ p {
+	font-family: cursive;
+	color: antiquewhite;
+	
+}
+p:hover{
+	color:#0a99ae;
+}
+body{
+	background-color: black;
+}

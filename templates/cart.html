@@ -1,35 +1,47 @@
-<table class="one_full border_green extra_padding">
-	<thead>
-		<tr class="">
-			<th class="quarter">Image</th>
-			<th class="sixth">Title</th>
-			<th class="sixth">Medium</th>
-			<th class="sixth">Size</th>
-			<th class="sixth">Aritist</th>
-			<th class="sixth">Price</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr ng-repeat="item in getArt()">
-			<td class="quarter"><img class="bimage cart_display_size" ng-src="{{ item.src }}" /></td>
-			<td class="sixth">{{ item.title }}</td>
-			<td class="sixth">{{ item.medium }}</td>
-			<td class="sixth">{{ item.dimensions }}</td>
-			<td class="sixth">{{ item.artistName }}</td>
-			<td class="sixth">{{ item.price | currency }}</td>
-			<td><button class="" ng-click="removeArt(item)">Remove this piece</button></td>
-		</tr>
-	</tbody>
-	<tfoot>
-		<!-- <tr ng-hide="total() == 0"> -->
-		<tr>
-			<td></td>
-			<td>Your order total is:</td><td style="color:green">{{ total() | currency }}</td>
-		</tr>
-	</tfoot>
-</table>
-	<div class="one_full">
-		<a class="third no_style" href="#"><p>Continue Shopping</p></a>
-		<button class="third no_style">Submit Order</button>
-		<button class="third no_style highlight_red" ng-click="clearCart()">Clear Cart</button>
-	</div>
+<div class="one_full side_margins">
+	<table class="one_full cart_pad extra_padding">
+		<thead class="one_full">
+			<tr class="one_full hide_on_drop">
+				<th class="quarter">Image of Piece</th>
+				<th class="twelve">Title</th>
+				<th class="twelve">Medium</th>
+				<th class="twelve">Size</th>
+				<th class="twelve">Aritist</th>
+				<th class="twelve">Price</th>
+				<th class="twelve visibility_none">E.L.O.</th>
+			</tr>
+		</thead>
+		<tbody class="one_full">
+			<tr class="one_full" ng-click="setCurrItem(item)" ng-repeat="item in getArt()">
+				<td class="quarter">
+					<a class="no_style quarter" href="#/favs/{{item.title}}">
+						<img class="cart_display_size rem_extra_marg" ng-src="{{ item.src }}" />
+					</a>
+				</td>
+				<td class="twelve cart_label_top_marg">{{ item.title }}</td>
+				<td class="twelve cart_label_top_marg">{{ item.medium }}</td>
+				<td class="twelve cart_label_top_marg">{{ item.dimensions }}</td>
+				<td class="twelve cart_label_top_marg">{{ item.artistName }}</td>
+				<td class="twelve cart_label_top_marg">{{ item.price | currency }}</td>
+				<td class="twelve cart_label_top_marg highlight_red" ng-click="removeArt(item)">Remove from cart</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr class="one_full">
+				<td class="quarter visibility_none">E.L.O.</td>
+				<td class="twelve visibility_none">E.L.O.</td>
+				<td class="twelve visibility_none">E.L.O.</td>
+				<td class="twelve visibility_none">E.L.O.</td>
+				<td class="twelve">Your order total is:</td>
+				<td class="twelve" style="color:green">{{ total() | currency }}</td>
+				<td class="twelve visibility_none">E.L.O.</td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+<div class="one_full">
+	<a class="third no_style" href="#"><p>Continue Shopping</p></a>
+	<a href="#/register">Register Purchase</a>
+	<button class="third no_style">Submit Order</button>
+	<button class="third no_style highlight_red" ng-click="clearCart()">Clear Cart</button>
+</div>

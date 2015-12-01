@@ -1,0 +1,4 @@
+Failed to decode downloaded font: http://localhost:8888/css/Mistral/Mistral.ttf
+
+OTS parsing error: cmap: misaligned table
+

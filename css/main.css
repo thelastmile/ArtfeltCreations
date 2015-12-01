@@ -1,41 +1,77 @@
+@font-face {
+    font-family: "Mistral";
+    src: url("Mistral/Mistral.otf");
+}
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
-	color: #151414;
-  outline: 1px solid black !important;
+	/*color: #151414;*/
+	color: bisque;
+	background-color: black;
+  /*outline: 1px solid green !important;*/
+  font-size: 105%;
 }
 html {
   padding: 0;
   margin: 0;
-  font: normal 100%/1.5 Sawasdee, Helvetica, sans-serif;
+  font: 100%/1.5 Mistral, Sawasdee, sans-serif !important;
   line-height: 1;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  font-weight: bold;
+  /*-moz-text-size-adjust: 100%;*/
+  /*-ms-text-size-adjust: 100%;*/
+  /*-webkit-text-size-adjust: 100%;*/
+  /*text-size-adjust: 100%;*/
+  /*font-weight: bold;*/
+	color: #fff;
 }
 body {
-	margin: 0 auto;
+	margin: .25em .25em;
 	text-align: center;
+	/* OVER-WRITES BOOTSTRAP */
+	background-color: black !important;
+}
+/* CUSTOM COLORS FOR THE NAV BAR */
+.home_color {
+	color: #C0504D !important;
+}
+.about_color {
+	color: #D76509 !important;
+}
+.gallery_color {
+	color: #376091 !important;
+}
+.cart_color {
+	color: #77933B !important;
+}
+.contact_color {
+	color: #7D629E !important;
 }
 
-
-
+.test_black {
+	border: 1px solid black;
+}
 .test_red {
-	border: 1px solid transparent;
+	border: 1px solid red;
+}
+.test_blue {
+	border: 1px solid blue;
+}
+.test_green {
+	border: 1px solid green;
 }
 
 
+/**************************************************/
+/**************************************************/
 /**************************************************/
 /**************************************************/
 /* THIS IS THE PICTURE FRAME BORDER
    FOR THE IMAGES OF ART */
 .bimage {
-	border-image: url('../images/picture_frame_II.png') 96 94 94 96 stretch;
+	/*border-image: url('../images/picture_frame_II.png') 96 94 94 96 stretch;*/
+	border-image: url('../images/picture_frame_III.png') 88 88 88 88 stretch;
 	border-right: 2em;
 	border-left: 2em;
 	border-top: 2em;
@@ -84,6 +120,23 @@ body {
 	text-align: center;
 	float: left;
 }
+.fifteen {
+	width: 15%;
+	text-align: center;
+	float: left;
+}
+.twelve {
+	width: 12%;
+	text-align: center;
+	float: left;
+}
+
+
+/* NEW STUFF */
+.about {
+	margin: auto 16.8125em;
+	text-align: left;
+}
 
 /* STYLING FOR NAV LINKS AND LIST ITEMS */
 .no_style {
@@ -105,10 +158,11 @@ body {
 /* BUTTONS */
 button {
 	width: 7em;
-	height: 2.5em;
+	height: 2em;
 	border-radius: .25em;
+	border: none;
 	background-color: transparent;
-	font-family: Sawasdee;
+	font-family: Mistral;
 }
 /* THE VIEW MORE BUTTON */
 .extra_margin_bottom {
@@ -128,11 +182,16 @@ button {
 	background-color: white;
 }
 
+/* CHANGES FONT TO Helvetica */
+.font_change {
+	font-family: Helvetica;
+}
 /* ******************************************************* */
 /* ******************************************************* */
 /* *********************END GLOBAL************************ */
 /* ******************************************************* */
 /* ******************************************************* */
+
 
 
 
@@ -142,49 +201,58 @@ button {
 /* POSITIONS THE HEADER/NAV BAR AS FIXED */
 .fix {
 	position: fixed;
-	padding-top: 1em;
-	padding-bottom: .75em;
-	/*border-bottom: 2px solid #151414;*/
+	/*padding-top: 1em;*/
+	/*padding-bottom: .75em;*/
 }
 .logo_size {
-	width: 12%;
+	/*width: 12%;*/
 }
 /* NEEDED TO SEPERATE IMAGE FROM
    HEADER/NAV BAR */
 .extra_padding {
-	padding-top: 9em;
+	/*padding-top: 11em;*/
 }
-.white_back {
-	background-color: white;
+.z_1000 {
+	/*z-index: 1000;*/
 }
 
 
 
 /* ******************************************************* */
 /* ******************************************************* */
-/* initial-display.html PAGE */
+/* gallery_display.html PAGE */
 /* SIZE ADJUSTMENT FOR THE MAIN PAGE HEADER IMAGE */
 .header_ratio {
-	width: 36em;
+	/*width: 36em;*/
 }
-/* STYLING FOR SAMPLE IMAGES ON intial-display.html PAGE*/
+/* STYLING FOR SAMPLE IMAGES ON gallery_display.html PAGE*/
 .display_size {
-	width: 20em;
-	height: 20em;
+	width: 15.5em;
+	height: 15.5em;
 }
 .cart_display_size {
 	width: 18em;
 	height: 18em;
 }
-
+.left_align_text {
+	text-align: left;
+}
+.align_info {
+	width: 16em;
+	text-align: left;
+	margin: 0 auto;
+}
+.pad_bottom {
+	padding-bottom: .5em;
+}
 
 
 /* ******************************************************* */
 /* ******************************************************* */
-/* STYLING FOR THE individual-piece.html PAGE */
+/* STYLING FOR THE individual_piece.html PAGE */
 /* THIS MAINTAINS THE RATIO OF THE ART IMAGE */
 .image_ratio {
-	width: 30em;
+	width: 27em;
 }
 /* THIS IS TO SIZE THE ARTIST'S PHOTO */
 .artist_photo {
@@ -211,17 +279,72 @@ button {
 }
 
 
-
+fix
 /* ******************************************************* */
 /* ******************************************************* */
 /* STYLING FOR THE cart.html PAGE */
 .highlight_red:hover {
 	color: red;
 }
+.cart_pad {
+	/*padding-top: 11em;*/
+}
+.side_margins {
+	padding-right: 3em;
+	padding-left: 3em;
+}
+.cart_size {
+	width: 397%;
+}
+.rem_extra_marg {
+	margin-top: 2em;
+}
+.cart_label_top_marg {
+	margin-top: 11em;
+}
+/* ******************************************************* */
+/* ******************************************************* */
+/* STYLING FOR THE filter.html PAGE */
+.z_placement {
+	z-index: 1;
+	padding-top: 10em;
+	padding-bottom: 1em;
+}
 
 
 
 
+/**************************************************/
+/**************************************************/
+/* LANDING PAGE */
+.nav_pad_ul {
+	margin-top: 0;
+	height: 1em;
+	float: right;
+}
+.nav_pad_li {
+	padding-left: 1em;
+	padding-right: 1em;
+	float: left;
+}
+.logo_div {
+	margin-left: 0;
+}
+.logo_image {
+}
+.logo_text {
+	font-size: 225%;
+	text-align: left;
+}
+.opportunity {
+	font-family: Helvetica;
+	font-weight: bolder;
+	color: #626262;
+	text-align: left;
+}
+.landing_images {
+	width: 100%;
+}
 /* ******************************************************* */
 /* ******************************************************* */
 /* ******************************************************* */
@@ -229,10 +352,12 @@ button {
 /* ******************************************************* */
 /* ******************************************************* */
 /* ******************************************************* */
-@media only screen and (max-width: 1150px) {
-	.header_ratio {
-		width: 41em;
-	}
+
+@media only screen and (max-width: 70em) {/* px */
+
+
+}
+@media only screen and (max-width: 65em) {/* 1170px */
 	.drop_from_third {
 		width: 50%;
 		text-align: center;
@@ -243,18 +368,34 @@ button {
 		text-align: center;
 	}
 	.btn_width_adjust {
-		width: 18%;
+		width: 20%;
 		float: none;
 		margin: 0 auto;
 	}
 }
 
-@media only screen and (max-width: 800px) {
-	.logo_size {
-		width: 25%;
+@media only screen and (max-width: 47em) {/* 845px */
+	.logo_div {
+		margin-top: -3em;
+		margin-left: 0;
+	}
+	.shift_div {
+		height: 10em;
+	}
+	.nav_pad_ul {
+		float: none;
+	}
+	.nav_pad_li {
+		float: none;
+	}
+	.logo_text {
+		text-align: center;
+	}
+	.opportunity {
+		text-align: center;
 	}
 	.extra_padding {
-		padding-top: 14em;
+		/*padding-top: 16em;*/
 	}
 	.header_ratio {
 		width: 27em;
@@ -273,138 +414,41 @@ button {
 	.artist_photo {
 		width: 11em;
 	}
-}
-
-
-
-
-
-
-
-
-
-/* ******************************************************* */
-/* ******************************************************* */
-/* ******************************************************* */
-/* ******************************************************* */
-/* ******************************************************* */
-/* ******************************************************* */
-/* ******************************************************* */
-/* ******************************************************* */
-
-/* MURPH'S WORK */
-
-/* LEFT ALIGN FOR RADIO BUTTONS */
-/*.left-align {
-  text-align: left;
-}*/
-
-/* * * *  Murph'z * * * */
-@media only screen and (max-width: 960px) {
-	.one-full.background.filterPg{
-		height: 31em;
+	.cart_pad {
+		padding-top: 6em;
+	}
+	.cart_size {
+		width: 50%;
+	}
+	.hide_on_drop {
+		visibility: hidden;
+	}
+	.twelve {
+		width: 100%;
+		text-align: center;
 	}
 }
-@media only screen and (max-width: 770px) {
-	.one-full.background.filterPg{
-		height: 23em;
+
+
+@media only screen and (max-width: 30em) {/* 525px */
+	.nav_pad_li {
 	}
-}
-@media only screen and (max-width: 500px) {
-	.one-full.background.filterPg{
-		height: 13.5em;
+	.nav_pad_ul {
 	}
-}
-.three-quarter {
-  width: 75%;
-  display: inline-block;
-}
-.eight {
-width: 10.5%;
-display: inline-block;
-}
-.refresh_div {
-  padding: 1em 1em 1em 1em;  
-}
-.refresh_btn {
-  padding: .25em;
-  border: 0;
-  font: normal 100%/1.5 Purisa, sans-serif;
-}
-.align-top {
-  vertical-align: top; 
-}
-.selectBy{
-  padding-bottom: 1em;
-}
-.selection {
-  padding-top: 1em;
-}
-.selection2 {
-  padding-top: .75em;
-}
-.selection div {
-	padding-bottom: .1875em;
-}
-.selection2 div {
-	padding-bottom: .1875em;
-}
-.selectArt  input {
-  padding: .3125em;
-  margin: .2em auto .5em auto;
-  border-radius: .3125em;
-}
-.selectByArtist select, .selectByArtist select option {
-	color: black;
-  font-size: .85em;
-  font-family: Purisa, sans-serif;
-  border-radius: .3125em;
-}
-.selectByArtist select:hover {
-	font-weight: bold;
-}
-.selectByArtist select:selected {
-	font-weight: bold;
-}
-.selectByInstitution select, .selectByInstitution select option {
-  color: black;
-  font-size: .85em;
-  font-family: Purisa, sans-serif;
-  border-radius: .3125em;
-}
-.selectByInstitution select:hover {
-	font-weight: bold;
-}
-fieldset {
-  border-radius: .3125em;
-}
-.topHeight {
-  min-height: 9em;  
-}
-.topDivHeight {
-  min-height: 12.5em;
-}
-.radio_select {
-  padding-top: .3em;
-  padding-bottom: .3em;
-}
-h4 {
-  margin: .75em auto .75em auto;
-}
-.artGallery {
-  max-height: 17em;
-}
-.singleGalleryPic {
-  display: inline-block;
-  max-height: 17em;
-  min-height: 17em;
-  width: 100%;
-  min-height: 17em;
-  max-width: 100%;
-  padding: 1em .5em;
-}
+	.header_ratio {
+		width: 21em;
+	}
+	.cart_pad {
+		padding-top: 3em;
+	}
+	.btn_width_adjust {
+		width: 33%;
+		float: none;
+		margin: 0 auto;
+	}
+	.extra_padding {
+		padding-top: 11em;
+	}
 
-
-
-
+}
 

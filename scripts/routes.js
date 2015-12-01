@@ -5,12 +5,17 @@ angular.module("routes", [])
  
   // HOME PAGE
   $routeProvider.when("/favs", {
-    templateUrl: "templates/initial-display.html"
+    templateUrl: "templates/initial_display.html"
   });
 
   // ABOUT PAGE
-  $routeProvider.when("/about", {
-    templateUrl: "templates/about.html"
+  $routeProvider.when("/new_about", {
+    templateUrl: "templates/new_about.html"
+  });
+
+  // GALLERY PAGE
+  $routeProvider.when("/gallery", {
+    templateUrl: "templates/gallery.html"
   });
 
   // INCARCERATED PAGE
@@ -25,7 +30,7 @@ angular.module("routes", [])
 
   // PROFILE PAGES FOR INDIVIDUAL PIECE
   $routeProvider.when("/favs/:individual", {
-    templateUrl: "templates/individual-piece.html"
+    templateUrl: "templates/individual_piece.html"
   });
 
   // CART PAGE
@@ -33,9 +38,14 @@ angular.module("routes", [])
     templateUrl: "templates/cart.html"
   });
 
+  // REGISTER A USER
+  $routeProvider.when("/register", {
+    templateUrl: "templates/register_user.html"
+  });
+
   // BACK TO HOME PAGE
   $routeProvider.otherwise({
-    templateUrl: "templates/initial-display.html"
+    templateUrl: "templates/initial_display.html"
   });
 
 });

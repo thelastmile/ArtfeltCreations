@@ -1,7 +1,13 @@
+<style type="text/css">
+  fieldset {
+    padding-top: .25em;
+  }
+
+</style>
 <div  class="one_full white_back z_placement">
 
-  <label class=""><span><h4>Browse By</h4></span></label>
-  <div class="quarter">
+  <div class="font_change"><h2 style="font-size: 2em;">Browse By</h2></div>
+  <div class="third">
     <fieldset class="">
       <select  ng-click="selectArtist('medium', artWork.medium)" type="type" ng-model="artWork.medium" class="">
         <option value="choose" ng-selected="true">Medium</option>
@@ -14,7 +20,7 @@
     </fieldset>
   </div>
 
-  <div class="quarter">
+<!--   <div class="quarter">
     <fieldset class="">
       <select ng-click="selectArtist('dimensions', artWork.dimensions)" type="type" name="artist" ng-model="artWork.dimensions" class="">
         <option value="choose" ng-selected="true">Size</option>
@@ -25,22 +31,23 @@
         <option value="11 x 17">11 x 17</option>
       </select>
     </fieldset>
-  </div>      
+  </div>    -->   
       
-  <div  class="quarter">
+  <div  class="third">
     <fieldset class="">
 
       <div class="">
-        <select ng-click="selectArtist('artistName', artWork.artistName)" type="type" name="artist" ng-model="artWork.artistName" class="" >
+        <select ng-click="selectArtist('artistName', artWork.artistName)" type="type" name="artist" ng-model="artWork.artistName" class=""  >; <!-- style="text-align: center;" style="padding-left: 9em" -->
+ >
           <option value="choose" class="" ng-selected="true">Artist</option>
           <!-- Options are generated from db onload -->
           <option ng-repeat="artist in artistArr"  >{{artist}}</option>
         </select>
       </div>
-    </fieldset>
+    </fieldset> 
   </div>
 
-  <div class="quarter">
+  <div class="third">
     <fieldset>
       <div class="">
         <select ng-click="selectArtist('prison', artWork.prison)" type="type" name="artist" ng-model="artWork.prison" class="" >
@@ -52,8 +59,9 @@
     </fieldset>
   </div>
 
-    <div  class="one-full">
-      <button ng-click="filterReset()" class="">RESET SELECTIONS</button>
+    <div  class="one-full resetBtn">
+      <button ng-click="filterReset()" style="margin: 1em; font-size: 100%; width:12em;"  class="dark_button font_change">RESET SELECTIONS</button>
+       <!-- style="margin: .75em; font-size: 150%; padding: .4em 0 0 0;" -->
     </div>
 </div>
 

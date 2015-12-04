@@ -1,0 +1,90 @@
+<style type="text/css">
+div {
+/*	font-family: Sawasdee;*/
+	color: #fff;
+}
+.extra_padding_about {
+	padding-top: 8em;
+}
+.ninety_five {
+	width: 95%;
+	margin: 0 2.5%;
+}
+.third > img {
+	width: 100%;
+	height: 15em;
+}
+.insetDiv {
+	position: relative;
+}
+.insetTopRight {
+	position: absolute;
+	background-color: rgba(0,0,0,0);
+	top: 5%;
+	left: 57%;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: lightyellow;
+}
+.insetBottomRight {
+	position: absolute;
+	background-color: rgba(0,0,0,0);
+	bottom: 4%;
+	left: 45%;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: lightyellow;
+}
+/* ******************************************************* */
+/* ********************* MEDIA QUERIES ******************* */
+@media only screen and (max-width: 65em) {/* 1170px */
+	.extra_padding_about {
+	padding-top: 10em;
+	}
+	.third > img {
+		width: 100%;
+		height: 13em;
+	}
+}
+@media only screen and (max-width: 47em) {/* 845px */
+	.extra_padding_about {
+	padding-top: 12em;
+	}
+	.third > img {
+		width: 100%;
+		height: 9em;
+	}
+}
+@media only screen and (max-width: 30em) {/* 525px */
+	.extra_padding_about {
+	padding-top: 4em;
+	}
+	.third > img {
+		width: 100%;
+		height: 9em;
+	}
+}
+</style>
+
+	<div class="extra_padding_about font_change">
+		<div class="one_full">
+			<div class="sixth">&nbsp</div>
+			<div class="two_thirds about">
+				<p>We believe that by teaching our youth to be creative, lessons can transcend into problem solving skills that can have a positive effect on their future.</p>
+				<p>With funding continuously being cut from art in education across the US, outside support is critical. Incarcerated artist have a chance to give back by donating a percentage of all sales proceeds to fund these programs.</p>			
+			</div>
+			<div class="sixth">&nbsp</div>
+		</div>  <!-- one_full -->
+		<div class="ninety_five">
+			<div class="one_full">
+				<div class="third insetDiv"><img src="./images/about/father_son_building.jpg"><span class="insetTopRight">Detroit, MI</span></div>
+				<div class="third insetDiv" ><span class="insetBottomRight">Seattle, WA</span><img src="./images/about/spaghetti_bridge.jpg"></div>
+				<div class="third insetDiv"><span class="insetBottomRight">Oakland, CA</span><img src="./images/teen_art/school_children.png"></div>
+			</div>
+			<div class="one_full">
+				<div class="third insetDiv"><span class="insetBottomRight">Portland, OR</span><img src="./images/about/teen_girls_building.jpg"></div>
+				<div class="third insetDiv"><span class="insetBottomRight">Atlanta, GA</span><img src="./images/teen_art/children_in_classroom_II.png"></div>
+				<div class="third insetDiv"><span class="insetBottomRight">Los Angeles, CA</span><img class="one_full" src="./images/teen_art/teen-museum-visit.jpg"></div>
+			</div>
+		</div>
+	</div>	<!-- <extra_padding -->

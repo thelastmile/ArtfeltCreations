@@ -9,8 +9,13 @@ angular.module("routes", [])
   });
 
   // ABOUT PAGE
-  $routeProvider.when("/new_about", {
-    templateUrl: "templates/new_about.html"
+  $routeProvider.when("/about", {
+    templateUrl: "templates/about.html"
+  });
+
+    // ABOUT SUPPORT PAGE
+  $routeProvider.when("/support", {
+    templateUrl: "templates/support.html"
   });
 
   // GALLERY PAGE

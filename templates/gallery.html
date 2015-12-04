@@ -1,28 +1,35 @@
 <!-- <div class="one_full extra_padding">
   <img class="header_ratio" src="images/artwork/man_in_cell.png">
 </div> -->
-<div class="one_full font_change">
-  <p>Connecting <a href="#/incarcerated">incarcerated artists</a> with prospective art buyers.</p>
+<div class="base_container">
+	<div class="one_full font_change">
+	  <!-- <p class="reduce_font">Connecting <a href="#/incarcerated">incarcerated artists</a> with prospective art buyers.</p> -->
+	</div>
+	<!-- **************************************************************** -->
+	<!-- THE BUTTON TO CYCLE IMAGES -->
+	<div class="one_full view_more">
+		<span class=""><button class="dark_button extra_margin_bottom" ng-click="cycleImages()">View More</button></span>
+	</div>
 </div>
-<!-- **************************************************************** -->
-<!-- THE BUTTON TO CYCLE IMAGES -->
-<div class="one_full">
-	<span class=""><button class="dark_button extra_margin_bottom" ng-click="cycleImages()">View More</button></span>
-</div>
-<!-- **************************************************************** -->
+	<!-- **************************************************************** -->
 
-<!-- THIS USES THE cycleImages() FUNCTION IN THE controllers.js FILE TO CYCLE RANDOM PIECES FOR DISPLAY -->
-<div class="font_change">
-	<div class="third drop_from_third pad_bottom" ng-click="setCurrItem(item)" ng-repeat="item in randItems | limitTo:6">
-		<a class="one_full no_style" href="#/favs/{{item.title}}">
-			<img class="bimage display_size" ng-src="{{item.src}}" alt="Sorry, no image to display:("/>
-		</a>
+	<!-- THIS USES THE cycleImages() FUNCTION IN THE controllers.js FILE TO CYCLE RANDOM PIECES FOR DISPLAY -->
+	<div class="one_full font_change close_margin">
+		<div class="third pad_bottom" ng-click="setCurrItem(item)" ng-repeat="item in randItems | limitTo:6">
+			<div class="image">
+				<button class="add_button dark_button" ng-click="addArt(item)">Add To Cart</button>
+				<a class="image_anchor no_style" href="#/favs/{{item.title}}">
+					<img class="bimage display_size" ng-src="{{item.src}}" alt="Sorry, no image to display:("/>
+				</a>
+			</div>
+			<div class="title_margin font_change">
 				<p class="align_info no_bottom_margin no_top_margin">Title: {{ item.title }}</p>
 				<p class="align_info no_top_margin no_bottom_margin">Medium: {{ item.medium }}</p>
 				<p class="align_info no_top_margin no_bottom_margin">Dimensions: {{ item.dimensions }}</p>
 				<p class="align_info no_top_margin no_bottom_margin">Artist: {{ item.artistName }}</p>
 				<p class="align_info no_top_margin no_bottom_margin">Price: {{ item.price | currency }}</p>
-				<span class="align_info one_full extra_margin_bottom"><button class="dark_button" ng-click="addArt(item)">Add To Cart</button></span>
+				<!-- <span class="align_info one_full extra_margin_bottom"><button class="dark_button" ng-click="addArt(item)">Add To Cart</button></span> -->
+			</div>
+		</div>
 	</div>
-</div>
-<!-- **************************************************************** -->
+	<!-- **************************************************************** -->

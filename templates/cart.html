@@ -1,4 +1,5 @@
-<div class="one_full side_margins">
+<div class="one_full side_margins font_change cart_bottom cart_top">
+
 	<table class="one_full cart_pad extra_padding">
 		<thead class="one_full">
 			<tr class="one_full hide_on_drop">
@@ -8,7 +9,7 @@
 				<th class="twelve">Size</th>
 				<th class="twelve">Aritist</th>
 				<th class="twelve">Price</th>
-				<th class="twelve visibility_none">E.L.O.</th>
+				<th class="twelve visibility_none">elo</th>
 			</tr>
 		</thead>
 		<tbody class="one_full">
@@ -28,20 +29,22 @@
 		</tbody>
 		<tfoot>
 			<tr class="one_full">
-				<td class="quarter visibility_none">E.L.O.</td>
-				<td class="twelve visibility_none">E.L.O.</td>
-				<td class="twelve visibility_none">E.L.O.</td>
-				<td class="twelve visibility_none">E.L.O.</td>
+				<td class="quarter visibility_none">elo</td>
+				<td class="twelve visibility_none">elo</td>
+				<td class="twelve visibility_none">elo</td>
+				<td class="twelve visibility_none">elo</td>
 				<td class="twelve">Your order total is:</td>
 				<td class="twelve" style="color:green">{{ total() | currency }}</td>
-				<td class="twelve visibility_none">E.L.O.</td>
+				<td class="twelve visibility_none">elo</td>
 			</tr>
 		</tfoot>
 	</table>
-</div>
-<div class="one_full">
-	<a class="third no_style" href="#"><p>Continue Shopping</p></a>
-	<a href="#/register">Register Purchase</a>
-	<button class="third no_style">Submit Order</button>
-	<button class="third no_style highlight_red" ng-click="clearCart()">Clear Cart</button>
+
+	<div class="one_full">
+		<a class="quarter no_style" href="#/gallery">Continue Shopping</a>
+		<a class="quarter no_style" href="#/register">Register Purchase</a>
+		<button class="quarter">Submit Order</button>
+		<button class="quarter highlight_red" ng-click="clearCart()">Clear Cart</button>
+	</div>
+
 </div>

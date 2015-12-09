@@ -1,4 +1,5 @@
-<div class="one_full side_margins font_change cart_bottom cart_top">
+
+<div class="one_full side_margins cart_bottom cart_top font_size_for_cart">
 
 	<table class="one_full cart_pad extra_padding">
 		<thead class="one_full">
@@ -16,7 +17,7 @@
 			<tr class="one_full" ng-click="setCurrItem(item)" ng-repeat="item in getArt()">
 				<td class="quarter">
 					<a class="no_style quarter" href="#/favs/{{item.title}}">
-						<img class="cart_display_size rem_extra_marg" ng-src="{{ item.src }}" />
+						<img class="display_size cart_display_size rem_extra_marg" ng-src="{{ item.src }}" />
 					</a>
 				</td>
 				<td class="twelve cart_label_top_marg">{{ item.title }}</td>
@@ -33,7 +34,7 @@
 				<td class="twelve visibility_none">elo</td>
 				<td class="twelve visibility_none">elo</td>
 				<td class="twelve visibility_none">elo</td>
-				<td class="twelve">Your order total is:</td>
+				<td class="twelve i_pad_cart_padding_top total_cost">Your order total is:</td>
 				<td class="twelve" style="color:green">{{ total() | currency }}</td>
 				<td class="twelve visibility_none">elo</td>
 			</tr>

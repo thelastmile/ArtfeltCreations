@@ -1,12 +1,13 @@
+
 <!-- THIS SHOWS THE INDIVIDUAL ITEM WHEN IT GETS SELECTED ON THE MAIN PAGE -->
-<div class="one_full extra_padding extra_margin_bottom font_change">
+<div class="one_full individual_extra_padding extra_margin_bottom font_change padding_top">
 	<div class="half">
 		<p class="one_full no_bottom_margin">{{ currItem.title }}, {{ currItem.medium }}</p>
 		<p class="one_full no_top_margin">{{ currItem.dimensions }}</p>
 		<img class="one_full bimage individual_image_ratio" ng-src="{{currItem.src}}" />
 		<div clas"one_full extra_margin_top">
 			<p class="half no_top_margin no_bottom_margin extra_padding_top">{{ currItem.price | currency }}</p>
-			<button class="dark_button no_top_margin" ng-click="addArt(currItem)">Add To Cart</button>
+			<button class="dark_button no_top_margin individual_button" ng-click="addArt(currItem)">Add</button>
 		</div>
 		<div clas"one_full">
 			<p class="half no_top_margin no_bottom_margin visibility_none">elo</p>

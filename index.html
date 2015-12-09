@@ -12,24 +12,29 @@
 </head>
 <!-- DECLARE APP FOR THE PAGE -->
 <body class="" ng-controller="ArtFeltController">
-  <!-- THIS IS THE HEADER WITH THE LOGO, NAV-BAR, AND ... -->
-  <div class="one_full fix home">
-    <div class="half logo_div">
-      <p class="logo_text center_on_drop no_bottom_margin">Artfelt Creations</p>
-      <p class="opportunity_text center_on_drop no_top_margin">Providing Opportunity Through Creativity</p>
+
+  <!-- <div class="home"> -->
+    <!-- THIS IS THE HEADER WITH THE LOGO, NAV-BAR, AND ... -->
+    <div class="one_full fix home">
+      <div class="half logo_div">
+        <p class="logo_text center_on_drop no_bottom_margin">Artfelt Creations</p>
+        <p class="opportunity_text center_on_drop no_top_margin">Providing Opportunity Through Creativity</p>
+      </div>
+      <div class="half nav_div">
+        <ul class="nav_pad_ul">
+          <li class="nav_pad_li no_style"><a href="index.html" class="home_color nav_bar_font_size no_style">Home</a></li>
+          <li class="nav_pad_li no_style"><a href="#/about" class="about_color nav_bar_font_size no_style">About</a></li>
+          <li class="nav_pad_li no_style"><a href="#/gallery" class="gallery_color nav_bar_font_size no_style">Gallery</a></li>
+          <li class="nav_pad_li no_style"><a href="#/test_filter" class="browse_color nav_bar_font_size no_style">Browse</a></li>
+          <li class="nav_pad_li no_style"><a href="#/cart" class="cart_color nav_bar_font_size no_style">Cart ({{ totalItems() }})</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="half nav_div">
-      <ul class="nav_pad_ul">
-        <li class="nav_pad_li no_style"><a href="/" class="home_color nav_bar_font_size no_style">Home</a></li>
-        <li class="nav_pad_li no_style"><a href="#/about" class="about_color nav_bar_font_size no_style">About</a></li>
-        <li class="nav_pad_li no_style"><a href="#/gallery" class="gallery_color nav_bar_font_size no_style">Gallery</a></li>
-        <li class="nav_pad_li no_style"><a href="#/test_filter" class="browse_color nav_bar_font_size no_style">Browse</a></li>
-        <li class="nav_pad_li no_style"><a href="#/cart" class="cart_color nav_bar_font_size no_style">Cart ({{ totalItems() }})</a></li>
-      </ul>
-    </div>
-  </div>
-  <!-- NG-VIEW IS WHERE ALL ROUTE RELATED CONTENT WILL BE LOADED. -->
-  <div class="one_full" ng-view></div>
+    <!-- NG-VIEW IS WHERE ALL ROUTE RELATED CONTENT WILL BE LOADED. -->
+    <div class="one_full" ng-view></div>
+  <!-- </div> -->
+
+
   <!-- SCRIPTS -->
   <script src="scripts/jquery/jquery-2.1.4.js"></script>
   <script src="scripts/angular/angular.js"></script>
@@ -37,6 +42,13 @@
   <script src="scripts/routes.js"></script>
   <script src="scripts/controllers.js"></script>
   <script src="scripts/main.js"></script>
+    <script type="text/javascript">
+    $('.nav_pad_ul li a').click(function() {
+      $('.nav_pad_ul li').removeClass('active');
+      $(this).parent().addClass('active');
+    });
+
+  </script>
 </body>
 </html>
 

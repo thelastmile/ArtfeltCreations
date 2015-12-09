@@ -13,13 +13,13 @@ angular.module('controllers', [])
       {id: 8, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"oil", artistName: "T. Winfrey", dimensions: "11 x 17", prison: "san quentin", src: "images/artwork/shark.jpg", title: "Shark", category: "what", price: 750},
       {id: 4, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"acrylic", artistName: "T. Winfrey", dimensions: "11 x 17", prison: "pelican bay", src: "images/artwork/man_in_cell.png", title: "Man In Cell", category: "what", price: 1500},
       {id: 3, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"oil", artistName: "J. Gripshover", dimensions: "2 x 3", prison: "folsom", src: "images/artwork/koala.jpg", title: "Koala", category: "what", price: 750},
-      {id: 5, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"acrylic", artistName: "A. Tamboura", dimensions: "7 x 9", prison: "san quentin", src: "images/artwork/midsummer.jpg", title: "Midsummer", category: "what", price: 2000},
+      {id: 5, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"acrylic", artistName: "A. Tamboura", dimensions: "9 x 9", prison: "san quentin", src: "images/artwork/midsummer.jpg", title: "Midsummer", category: "what", price: 2000},
       {id: 6, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"oil", artistName: "T. Winfrey", dimensions: "5 x 7", prison: "san quentin", src: "images/artwork/ren_man.png", title: "Ren Man", category: "what", price: 450},
       {id: 7, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"acrylic", artistName: "T. Winfrey", dimensions: "12 x 24", prison: "san quentin", src: "images/artwork/self_portrait.jpg", title: "Self Portrait", category: "what", price: 150},
       {id: 9, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"acrylic", artistName: "A. Tamboura", dimensions: "5 x 7", prison: "san quentin", src: "images/artwork/ship.jpg", title: "Ship", category: "what", price: 900},
       {id: 10, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"pencil", artistName: "T. Winfrey", dimensions: "7 x 9", prison: "san quentin", src: "images/artwork/two_moons.jpg", title: "Two Moons", category: "what", price: 250},
       {id: 11, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"water color", artistName: "J. Gripshover", dimensions: "9 x 11", prison: "san quentin", src: "images/artwork/whales.jpg", title: "Whales", category: "what", price: 625},
-      {id: 12, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"water color", artistName: "J. Gripshover", dimensions: "9 x 11", prison: "san quentin", src: "images/artwork/abstract.png", title: "Abstract", category: "what", price: 250},
+      {id: 12, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"oil", artistName: "J. Gripshover", dimensions: "9 x 11", prison: "san quentin", src: "images/artwork/abstract.png", title: "Abstract", category: "what", price: 250},
       {id: 14, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"water color", artistName: "Wagner", dimensions: "11 x 17", prison: "san quentin", src: "images/artwork/dolphin.png", title: "Dolphin", category: "what", price: 2500},
       {id: 1, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"pencil", artistName: "J. Gripshover", dimensions: "7 x 9", prison: "soledad", src: "images/artwork/jack_red_cloud.jpg", title: "Jack Red Cloud", category: "what", price: 20000},
       {id: 15, quantity: 0, description: "DOM Level 1 became a W3C recommendation in October 1998. It consisted of two modules:the DOM Core, which provided a way to map the structure of...", medium:"water color", artistName: "Wagner", dimensions: "11 x 17", prison: "san quentin", src: "images/artwork/eagles.png", title: "Eagles", category: "what", price: 650},
@@ -224,6 +224,9 @@ angular.module('controllers', [])
             $scope.prevSearch = true;
             $scope.results = [];
             $scope.results = $scope.tempResult.slice(0);
+            if ($scope.results.length === 0) {
+                  $('div.no_results').html("Sorry, but there are no results for your selection.")
+            }
 
         }  // end of 'else' for 'if ($scope.results.length === 0)'
       }  // end if (choose) for Reset         
@@ -249,9 +252,9 @@ angular.module('controllers', [])
   };  // END of $scope.selectArtist = function (name, selection)
 
   $scope.filterReset = function () {
-      for (var key in $scope.artWork) {        
-        $scope.artWork[key] = "choose";
-      };             
+    for (var key in $scope.artWork) {        
+      $scope.artWork[key] = "choose";
+    };             
   }
 
 }) // END OF CONTROLLER: 'ArtFeltController'

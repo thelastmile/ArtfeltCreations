@@ -1,90 +1,101 @@
+
 <style type="text/css">
-div {
-/*	font-family: Sawasdee;*/
-	color: #fff;
-}
-.extra_padding_about {
+
+.support-container {
+	font-family: Helvetica;
 	padding-top: 8em;
+	text-align: justify;
 }
-.ninety_five {
-	width: 95%;
-	margin: 0 2.5%;
+.support-container .support {
+	margin-bottom: 2em;
 }
-.third > img {
-	width: 100%;
-	height: 15em;
+.support-container .ninety_five {
+	text-align: center;
 }
-.insetDiv {
+.support-container .insetDiv {
+	display: inline-block;
+	width: 30%;
 	position: relative;
+	margin-right: .5em;
+	margin-left: .5em;
+	margin-bottom: 1em;
 }
-.insetTopRight {
-	position: absolute;
-	background-color: rgba(0,0,0,0);
-	top: 5%;
-	left: 57%;
-	font-size: 1.5em;
-	font-weight: bold;
-	color: lightyellow;
+.support-container .insetDiv img {
+	width: 100%;
+	height: 14em;
 }
 .insetBottomRight {
 	position: absolute;
 	background-color: rgba(0,0,0,0);
 	bottom: 4%;
-	left: 45%;
+	right: .5em;
 	font-size: 1.5em;
 	font-weight: bold;
 	color: lightyellow;
 }
 /* ******************************************************* */
 /* ********************* MEDIA QUERIES ******************* */
-@media only screen and (max-width: 65em) {/* 1170px */
-	.extra_padding_about {
-	padding-top: 10em;
+@media only screen and (max-width: 59em) {/* 1170px */
+	.support-container {
+		padding-top: 10em;
 	}
-	.third > img {
+	.support-container .ninety_five {
+		text-align: center;
+	}
+	.support-container .insetDiv {
 		width: 100%;
-		height: 13em;
+	}
+	.support-container .insetDiv img {
+		width: 100%;
+		height: 17em;
 	}
 }
-@media only screen and (max-width: 47em) {/* 845px */
-	.extra_padding_about {
-	padding-top: 12em;
+
+@media only screen and (max-width: 29em) {/* 525px */
+	.support-container {
+		padding-top: 5em;
 	}
-	.third > img {
+	.support-container .insetDiv img {
 		width: 100%;
-		height: 9em;
-	}
-}
-@media only screen and (max-width: 30em) {/* 525px */
-	.extra_padding_about {
-	padding-top: 4em;
-	}
-	.third > img {
-		width: 100%;
-		height: 9em;
+		height: 11em;
 	}
 }
 </style>
 
-	<div class="extra_padding_about font_change">
-		<div class="one_full">
-			<div class="sixth">&nbsp</div>
-			<div class="two_thirds about">
+	<div class="support-container">
+		<div class="">
+			<div class="support">
 				<p>We believe that by teaching our youth to be creative, lessons can transcend into problem solving skills that can have a positive effect on their future.</p>
 				<p>With funding continuously being cut from art in education across the US, outside support is critical. Incarcerated artist have a chance to give back by donating a percentage of all sales proceeds to fund these programs.</p>			
 			</div>
-			<div class="sixth">&nbsp</div>
 		</div>  <!-- one_full -->
 		<div class="ninety_five">
-			<div class="one_full">
-				<div class="third insetDiv"><img src="./images/about/father_son_building.jpg"><span class="insetTopRight">Detroit, MI</span></div>
-				<div class="third insetDiv" ><span class="insetBottomRight">Seattle, WA</span><img src="./images/about/spaghetti_bridge.jpg"></div>
-				<div class="third insetDiv"><span class="insetBottomRight">Oakland, CA</span><img src="./images/teen_art/school_children.png"></div>
+			<div class="">
+				<div class="insetDiv">
+					<img src="./images/about/father_son_building.jpg">
+					<span class="insetBottomRight">Detroit, MI</span>
+				</div>
+				<div class="insetDiv" >
+					<span class="insetBottomRight">Seattle, WA</span>
+					<img src="./images/about/spaghetti_bridge.jpg">
+				</div>
+				<div class="insetDiv">
+					<span class="insetBottomRight">Oakland, CA</span>
+					<img src="./images/teen_art/school_children.png">
+				</div>
 			</div>
-			<div class="one_full">
-				<div class="third insetDiv"><span class="insetBottomRight">Portland, OR</span><img src="./images/about/teen_girls_building.jpg"></div>
-				<div class="third insetDiv"><span class="insetBottomRight">Atlanta, GA</span><img src="./images/teen_art/children_in_classroom_II.png"></div>
-				<div class="third insetDiv"><span class="insetBottomRight">Los Angeles, CA</span><img class="one_full" src="./images/teen_art/teen-museum-visit.jpg"></div>
+			<div class="">
+				<div class="insetDiv">
+					<span class="insetBottomRight">Portland, OR</span><img src="./images/about/teen_girls_building.jpg">
+				</div>
+				<div class="insetDiv">
+					<span class="insetBottomRight">Atlanta, GA</span>
+					<img src="./images/teen_art/children_in_classroom_II.png">
+				</div>
+				<div class="insetDiv">
+					<span class="insetBottomRight">Los Angeles, CA</span>
+					<img class="" src="./images/teen_art/teen-museum-visit.jpg">
+				</div>
 			</div>
 		</div>
 	</div>	<!-- <extra_padding -->

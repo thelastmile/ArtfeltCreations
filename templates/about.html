@@ -1,90 +1,51 @@
 <style type="text/css">
-	div {
-		/*font-family: Sawasdee;*/
-		color: #fff;
-	}
-	.footer_logo {
-		width: 75%;
-	}
-	.about {
-		/*margin: auto 16.8125em;*/
-		text-align: left;
-	}
-/*	p + a:link {
-		color: blue;
-	}*/
-	.anchorBlue {
-		color: blue;
-	}
-	.extra_padding_about {
-	padding-top: 7em;
-	}
-/* ******************************************************* */
-/* ********************* MEDIA QUERIES ******************* */
-@media only screen and (max-width: 65em) {/* 1170px */
-	.drop_one_sixth {
-		display: none;
-	}
-	.about {
-		margin: auto 6.5em;
-		text-align: left;
-	}
-	.extra_padding_about {
-	padding-top: 10em;
-	}
-}
-@media only screen and (max-width: 47em) {/* 845px */
-	.drop_one_sixth {
-		display: none;
-	}
-/*	.two_thirds {
+	#about {
+		text-align: justify;
+		padding-top: 8em;
+		font-family: Helvetica;
 		width: 100%;
-		text-align: center;
-		float: left;
-	}*/
-	.about {
-		margin: auto 4em;
-		text-align: left;
 	}
-	.extra_padding_about {
-	padding-top: 9em;
+	#about .a-orange {
+		color: #D66509;
 	}
-}
-@media only screen and (max-width: 30em) {/* 525px */
-	.drop_one_sixth {
-		display: none;	
-	}
-	.two_thirds {
-		width: 100%;
-		text-align: center;
-		float: left;
-	}
-	.about {
+	#about .founder p {
 		margin: 0;
-		text-align: left;
 	}
-	.extra_padding_about {
-	padding-top: 4em;
+	#about .center {
+		text-align: center;
+		margin-right: auto;
+		margin-left: auto;
+		left: 0;
+		right: 0;
 	}
-}
+	#about .padding-bottom-sm {
+		padding-bottom: 1em;
+	}
+
+	@media only screen and (max-width: 59em) {
+		#about {
+			padding-top: 11em;
+		}
+		.new_pad {
+			padding-bottom: 7em;
+		}
+	}	
+	@media only screen and (max-width: 29em) {
+		#about {
+			padding-top: 5em;
+		}
+	}
 </style>
 
-	<div class="extra_padding_about font_change">
-		<div class="">
-			<div class="sixth drop_one_sixth">&nbsp</div>
-			<div class="two_thirds about">
-				<p>For years our creativity has been locked away for no one to see. All artwork on this site was produced in prison by those wishing to express themselves through art.</p>
-				<p>Sales proceeds will help artist when they reenter society and support after<a class="anchorBlue" href="#/support"> school art programs </a>in underserved communities.</p>
-				<p>Thank you for looking at the world through our eyes. </br>We hope you'll enjoy the journey.</p>
-			</div>
-			<div class="sixth drop_one_sixth">&nbsp</div>
-		</div>  <!-- one_full -->
-	    <div class="one_full"> 
-	         <div class="two_thirds">&nbsp</div>
-	    	<div class="quarter">
-				<p>Tommy Winfrey, Founder<br>San Quentin State Prison</p>
-				<!-- <img class="footer_logo" src="../images/artfelt_logo_SMALL.png"> -->
-			</div>
-	    </div>
-
-	</div>	<!-- <extra_padding -->
+<div id="about" class="center">
+  <div class="founder center padding-bottom-sm"> 
+		<img class="footer_logo" src="images/tommy_profile_pic.jpg">
+		<p>Tommy Winfrey, Founder</p>
+		<p>San Quentin State Prison</p>
+  </div>
+	<div class="about-info">
+		<p>For years our creativity has been locked away for no one to see. All artwork on this site was produced in prison by those wishing to express themselves through art.</p>
+		<p>Sales proceeds will help artist when they reenter society and support after <a class="a-orange" href="#/support">school art programs</a> in underserved communities.</p>
+		<p class="new_pad">Thank you for looking at the world through our eyes. We hope you'll enjoy the journey.</p>
+	</div>
+</div>	<!-- <extra_padding -->
